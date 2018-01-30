@@ -2,18 +2,18 @@ $(document).ready(function(){
   $("#myBtnCarga").click(function(){
      var hClinica = $("#hClinica").val();
      if(hClinica==""||Number.isNaN(hClinica)||hClinica.length>=8||/^\s+$/.test(hClinica)){
-        $("#hClinicaRta").addClass("#incorrecto");
+        $("#hClinicaRta").addClass("incorrecto");
         $("#hClinicaRta").html("Datos Incorrectos");
         }else{
-          $("#hClinicaRta").addClass("#correcto");
+          $("#hClinicaRta").addClass("correcto");
           $("hClinicaRta").html("Campo Válido");
         }   
 var fIngreso = $("#fIngreso").val();
   if(fIngreso==""||fIngreso.length>=11||/^\s+$/.test(fIngreso)){
-     $("#fIngresoRta").addClass("#incorrecto");
+     $("#fIngresoRta").addClass("incorrecto");
      $("#fIngresoRta").html("Datos incorrectos");
         }else{
-           $("#fIngresoRta").addClass("#correcto");
+           $("#fIngresoRta").addClass("correcto");
            $("fIngresoRta").html("Campo Válido");
         }
 var nCompleto = $("#nCompleto").val();
@@ -113,7 +113,7 @@ var fAlta = $("#fAlta").val();
            $("#fALtaRta").html("Campo Válido");
         }
 var cEgreso = $("#cEgreso").val();
-  if(cEgreso==""||cEgreso.length>=25||/^\s+$/.test(CEgreso)){ 
+  if(cEgreso==""||cEgreso.length>=25||/^\s+$/.test(cEgreso)){ 
      $("#cEgresoRta").addClass("incorrecto");
      $("#cEgresoRta").html("Datos Incorrectos");
         }else{
@@ -121,21 +121,19 @@ var cEgreso = $("#cEgreso").val();
            $("#cEgresoRta").html("Campo Válido");
         }
 
-$.ajax({
-  url : 'https://www.urgencias.local/libronegro/login.php',
-  data : {},
-  type : 'POST',
-  dataType : 'text',
+var params = $("form").serialize();
+console.log(params);
 
-  success : function(data) {
-     },
-  error : function(xhr, status) {
-       alert('Disculpe, existió un problema');
-     },
-  complete : function(xhr, status) {
-       alert('Petición realizada');
-     }
-     });
+    $.ajax({
+      url : 'libroNegro.php',
+      data : {},
+      type : 'POST',
+      dataType : 'text',
+
+      success : function(data){
+
+
+        }
+    });
   });
-});   
-    
+});
