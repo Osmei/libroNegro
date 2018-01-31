@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#loginBtn").click(function(){
 
         var params = $("form").serialize();
-        console.log(params);
+        
 
         $.ajax({
             url : 'index.php',
@@ -12,7 +12,20 @@ $(document).ready(function(){
             type : 'POST',
             dataType : 'text',      
             success : function(data){      
-      
+                switch (data) {
+                    case 'NOUSER':
+                        $("#status").html("Por favor ingrese un usuario.");
+                    break;
+                    case 'NOPASS':
+                        $("#status").html("Por favor ingrese una contraseña.");
+                    break;
+                    case 'ERROR':
+                        $("#status").html("Usuario y/o contraseña incorrecto.");
+                    break;
+                    case 'OK':
+                       location.href="signInForm.html"; 
+                    break;                    
+                }
             }
         });
     });

@@ -74,6 +74,7 @@ DROP TABLE IF EXISTS `Cama`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Cama` (
   `idCama` int(11) NOT NULL,
+  `descripcion` varchar(45) NOT NULL,
   `Sala_idSala` int(11) NOT NULL,
   PRIMARY KEY (`idCama`,`Sala_idSala`),
   KEY `fk_Cama_Sala_idx` (`Sala_idSala`),
@@ -87,6 +88,7 @@ CREATE TABLE `Cama` (
 
 LOCK TABLES `Cama` WRITE;
 /*!40000 ALTER TABLE `Cama` DISABLE KEYS */;
+INSERT INTO `Cama` VALUES (1,'Cama 1',1),(2,'Cama 2',1),(3,'Cama 3',1),(4,'Cama 4',1),(5,'Cama 5',1),(6,'Cama 6',1),(7,'Cama 7',1),(8,'Cama 8',1),(9,'Cama 9',1),(10,'Cama 1',2),(11,'Cama 2',2),(12,'Cama 3',2),(13,'Cama 4',2),(14,'Cama 5',2),(15,'Cama 6',2),(16,'Cama 7',2),(17,'Cama 8',2),(18,'Cama 9',2),(19,'Cama 10',2),(20,'Cama 11',2),(21,'Cama 12',2),(22,'Cama 13',2),(23,'Cama 14',2),(24,'Cama 15',2),(25,'Cama 16',2),(26,'Cama 1',3),(27,'Cama 2',3),(28,'Cama 3',3),(29,'Cama 4',3),(30,'Cama 5',3),(31,'Cama 6',3),(32,'Cama 7',3),(33,'Cama 8',3),(34,'Cama 9',3),(35,'Cama 10',3),(36,'Cama 11',3),(37,'Cama 12',3),(38,'Cama 13',3),(39,'Cama 14',3),(40,'Cama 15',3),(41,'Cama 16',3),(42,'Cama 1',5),(43,'Cama 2',5),(44,'Cama 3',5);
 /*!40000 ALTER TABLE `Cama` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,7 +296,7 @@ DROP TABLE IF EXISTS `Sala`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Sala` (
   `idSala` int(11) NOT NULL,
-  `nombreSala` varchar(45) DEFAULT NULL,
+  `nombreSala` varchar(45) NOT NULL,
   PRIMARY KEY (`idSala`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -305,6 +307,7 @@ CREATE TABLE `Sala` (
 
 LOCK TABLES `Sala` WRITE;
 /*!40000 ALTER TABLE `Sala` DISABLE KEYS */;
+INSERT INTO `Sala` VALUES (1,'UTI - Unidad de Terapia Intensiva'),(2,'Sala A'),(3,'Sala C'),(4,'Guardia'),(5,'Shock Room');
 /*!40000 ALTER TABLE `Sala` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -334,6 +337,31 @@ CREATE TABLE `UrgenciaMedica` (
 LOCK TABLES `UrgenciaMedica` WRITE;
 /*!40000 ALTER TABLE `UrgenciaMedica` DISABLE KEYS */;
 /*!40000 ALTER TABLE `UrgenciaMedica` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Usuario`
+--
+
+DROP TABLE IF EXISTS `Usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Usuario` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreUsuario` varchar(45) COLLATE utf8_spanish2_ci NOT NULL,
+  `password` varchar(45) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Usuario`
+--
+
+LOCK TABLES `Usuario` WRITE;
+/*!40000 ALTER TABLE `Usuario` DISABLE KEYS */;
+INSERT INTO `Usuario` VALUES (1,'admin','2be595df63390048fa6385e35a8a5e05');
+/*!40000 ALTER TABLE `Usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -371,4 +399,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-30 17:40:52
+-- Dump completed on 2018-01-31 15:49:34

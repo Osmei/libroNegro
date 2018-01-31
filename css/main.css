@@ -62,7 +62,7 @@ input[type="password"]:hover{
    color: #fff;
    /*color: rgba(0,0,0,.5);*/
 }
-input[type="submit"]{
+input[type="button"]{
    border: none;
    outline: none;
    height: 40px;
@@ -95,3 +95,7 @@ input[type="submit"]:hover{
    color: #e040fb;   
 }
 
+#status{
+    font-weight: bold;
+    color: red;
+}

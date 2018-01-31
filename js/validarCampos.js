@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  cargarOpcionesSelect();
+
   $("#myBtnCarga").click(function(){
      var hClinica = $("#hClinica").val();
      if(hClinica==""||Number.isNaN(hClinica)||hClinica.length>=8||/^\s+$/.test(hClinica)){
@@ -24,22 +26,22 @@ var nCompleto = $("#nCompleto").val();
            $("#nCompletoRta").addClass("correcto");
            $("#nCompletoRta").html("Campo Válido");
         }
-var sala = $("#sala").val();
+/*var sala = $("#sala").val();
   if(sala==""||sala.length>=25||/^\s+$/.test(sala)){
      $("#salaRta").addClass("incorrecto");
      $("#salaRta").html("Datos incorrectos");
         }else{
            $("#salaRta").addClass("correcto");
            $("#salaRta").html("Campo Válido");
-        }
-var cama = $("#cama").val(); 
+        }*/
+/*var cama = $("#cama").val(); 
   if(cama==""||cama.length>=25||/^\s+$/.test(cama)){
      $("#camaRta").addClass("incorrecto");
      $("#camaRta").html("Datos incorrectos");
         }else{
            $("#camaRta").addClass("correcto");
            $("#camaRta").html("Campo Válido");
-        }
+        }*/
 var sexo = $("#sexo").val();
   if(sexo==""||sexo.length>=25||/^\s+$/.test(sexo)){
      $("#sexoRta").addClass("incorrecto");
@@ -122,7 +124,6 @@ var cEgreso = $("#cEgreso").val();
         }
 
 var params = $("form").serialize();
-console.log(params);
 
     $.ajax({
       url : 'libroNegro.php',
@@ -137,3 +138,33 @@ console.log(params);
     });
   });
 });
+
+function cargarOpcionesSelect(){
+  
+  $.ajax({
+    url : 'libroNegro.php?op=sala',
+    data : {
+        
+    },
+    type : 'POST',
+    dataType : 'html',      
+    success : function(data){    
+        $("#sala").html(data);                  
+      }
+  });
+
+  $("#sala").change(function(){
+    var idSala = $("#sala").val();
+    $.ajax({
+      url : 'libroNegro.php?op=cama',
+      data : {
+          idSala: idSala
+      },
+      type : 'POST',
+      dataType : 'html',      
+      success : function(data){    
+        $("#cama").html(data);   
+      }
+    });
+  });
+}
