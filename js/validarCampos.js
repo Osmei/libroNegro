@@ -153,6 +153,30 @@ function cargarOpcionesSelect(){
       }
   });
 
+  $.ajax({
+    url : 'libroNegro.php?op=cie10',
+    data : {
+        
+    },
+    type : 'POST',
+    dataType : 'html',      
+    success : function(data){    
+        //$("#cie10").html(data);                  
+      }
+  });
+
+  $.ajax({
+    url : 'libroNegro.php?op=medico',
+    data : {
+        
+    },
+    type : 'POST',
+    dataType : 'html',      
+    success : function(data){    
+        $("#medico").html(data);                  
+      }
+  });
+
   $("#sala").change(function(){
     var idSala = $("#sala").val();
     $.ajax({
