@@ -71,7 +71,7 @@ input[type="button"]{
    transition: .7s; 
 }
 input[type="button"]:hover{
-   background: #b6b5b5;;
+   background: #b6b5b5;
    color: #fff;
    border: none;
 }
