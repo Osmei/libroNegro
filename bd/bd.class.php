@@ -3,8 +3,19 @@ class bd{
 
     public $conn;
 
-    public function __construct(){
-        $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+    public function __construct(){        
+        
+        if($_SERVER['HTTP_HOST']=="libronegrosw"){
+            $this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
+        }elseif($_SERVER['HTTP_HOST']=="libronegrosl"){
+            $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+        }else{
+            $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+        }
+
+
+        
+        
 
         if(!$this->conn){
             return false;

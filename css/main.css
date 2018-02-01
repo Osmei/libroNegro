@@ -94,8 +94,12 @@ input[type="button"]:hover{
 .inputBox span i{
    color: dodgerblue;   
 }
-
+.contLogin{
+    margin-top:15px;
+}
 #status{
     font-weight: bold;
     color: red;
+    margin: 0;
+    padding: 0;
 }
