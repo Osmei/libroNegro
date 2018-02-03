@@ -5,14 +5,10 @@
       <h3 class="modal-title" id="exampleModalLabel">Elegir CIE-10</h3>      
     </div>
     <div class="modal-body">
-      <input type="text" placeholder="Buscar por código o nombre" name="cie10Md" id="cie10Md" class="form-control" />
-      <ul id="listaRta">
-
-      </ul>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary">Save changes</button>  
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>      
+      <input type="text" placeholder="Buscar por código" name="cie10Md" id="cie10Md" class="form-control" />
+      <table class="table table-hover" id="listaRtaCie10">
+        
+      </table>
     </div>
   </div>
 </div>
@@ -29,8 +25,15 @@ $(document).ready(function(){
       },
       type : 'POST',
       dataType : 'html',      
-      success : function(data){ console.log(data);
-          $("#listaRta").html(data);
+      success : function(data){
+          $("#listaRtaCie10").html(data);
+
+          $(".grabarCie").click(function(){
+            var contenido = $(this).parent().parent().children()[0];            
+            $("#ponerAquiCie").html("<input type='text' id='cie10' name='cie10' readonly class='form-control' value='"+$(contenido).data('cie')+"'>");
+            //$("#listaRtaCie10").html("");
+            //$("#cie10Md").val("");
+          });
         }
     });  
   });

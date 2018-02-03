@@ -153,6 +153,21 @@ var params = $("form").serialize();
         }
     });
   });
+  $("#elegirbarrio").click(function(e){
+    e.preventDefault();    
+    $.ajax({
+      url : 'modalBarrio.php',
+      data : {
+          
+      },
+      type : 'POST',
+      dataType : 'html',      
+      success : function(data){
+          $("#contenedor").append(data);
+          $('#modalBarrio').modal('show');
+        }
+    });
+  });
 });
 
 function cargarOpcionesSelect(){

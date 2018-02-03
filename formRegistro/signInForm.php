@@ -73,14 +73,14 @@
       </div>
       <div class="cie-10">   
         <h2>CIE-10</h2>
-        <input type="text" id="cie10" name="cie10" readonly placeholder="CIE-10">
-        <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>
-        </select>
+        <div id="ponerAquiCie"></div>
+        <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>        
         <div id="cie10Rta"></div>
       </div>
       <div class="barrio">   
         <h2>Barrio</h2>
-        <input type="text" id="barrio" name="barrio">
+        <div id="ponerAquiBarrio"></div>
+        <button class="btn btn-primary" id="elegirbarrio" data-toggle="modal" data-target="#modalBarrio">Elegir</button>
         <div id="barrioRta"></div>
       </div>
       <div class="medico">   
