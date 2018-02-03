@@ -4,7 +4,7 @@
 
 
 
-    require_once("bd/bd.class.php");
+    require_once("../bd/bd.class.php");
     
 
 ?>

@@ -9,7 +9,7 @@
     ini_set("display_errors", 1);
     
 
-    require_once("includes/includes.php");
+    require_once("../includes/includes.php");
 
     $bd = new bd();
     
@@ -52,6 +52,18 @@
                 $opciones.="<option value=''>".$medico['Nombre']." - ".$medico['DNI']."</option>";
             }
             echo $opciones;
+        break;
+        case 'cargarCie':
+            if(isset($_POST['palabra'])){
+                $palabra = $_POST['palabra'];
+            }
+            $queryCie = "SELECT * FROM libronegro.`cie-10` WHERE Cod like '%$palabra%' /*OR Descripcion like '%$palabra%'*/ LIMIT 5";
+            $cies = $bd->ejecutarQuery($queryCie);
+            $items = "";
+            foreach ($cies as $cie) {
+                $items .= "<li>".$cie['Cod']." - ".$cie['Descripcion']."</li>";
+            }
+            echo $items;
         break;
     }
 ?>

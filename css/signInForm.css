@@ -129,4 +129,6 @@ ul a{
     color: green;
     font-size: 14px;
 }
-
+.modal{
+    z-index:100000px;
+}

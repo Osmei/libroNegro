@@ -137,6 +137,22 @@ var params = $("form").serialize();
         }
     });
   });
+
+  $("#elegircie10").click(function(e){
+    e.preventDefault();    
+    $.ajax({
+      url : 'modalCIE10.php',
+      data : {
+          
+      },
+      type : 'POST',
+      dataType : 'html',      
+      success : function(data){
+          $("#contenedor").append(data);
+          $('#modalCie10').modal('show');
+        }
+    });
+  });
 });
 
 function cargarOpcionesSelect(){
@@ -150,18 +166,6 @@ function cargarOpcionesSelect(){
     dataType : 'html',      
     success : function(data){    
         $("#sala").html(data);                  
-      }
-  });
-
-  $.ajax({
-    url : 'libroNegro.php?op=cie10',
-    data : {
-        
-    },
-    type : 'POST',
-    dataType : 'html',      
-    success : function(data){    
-        //$("#cie10").html(data);                  
       }
   });
 

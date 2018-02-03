@@ -4,9 +4,23 @@ class bd{
     public $conn;
 
     public function __construct(){        
+        
+        //if($_SERVER['HTTP_HOST']=="libronegrosw"){
+            //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
+        /*}elseif($_SERVER['HTTP_HOST']=="libronegrosl"){
+            $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+        }else{
+            //$this->conn = new mysqli("localhost","usuario","contraseña","LibroNegro");
+            
+        }*/
         $this->conn = new mysqli("localhost","root","f1882,cM-N","LibroNegro");
-        return $this->conn;
+
+        if(!$this->conn){
+            return false;
         }
+
+        return $this->conn;
+    }
 
     public function ejecutarQuery($sql){
 		$vec = array();
