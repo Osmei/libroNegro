@@ -28,7 +28,7 @@
       </div>
       <div class="fIngreso">   
         <h2>Fecha de Ingreso</h2>
-        <input type="text" id="fIngreso" name="fIngreso">
+        <input type="date" id="fIngreso" name="fIngreso">
         <div id="fIngresoRta"></div>
       </div>   
       <div class="nCompleto">   
@@ -101,7 +101,7 @@
       </div>
       <div class="fechaAlta">   
         <h2>Fecha de Alta</h2>
-        <input type="text" id="fAlta" name="fAlta">
+        <input type="date" id="fAlta" name="fAlta">
         <div id="fAltaRta"></div>
       </div>         
       <div class="condEgreso">   

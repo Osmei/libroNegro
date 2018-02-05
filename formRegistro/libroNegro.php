@@ -15,7 +15,7 @@
     
     switch ($_GET['op']) {
         case 'sala':
-            $querySala = "SELECT * FROM Sala";
+            $querySala = "SELECT * FROM LibroNegro.Sala";
             $salas = $bd->ejecutarQuery($querySala);
             $opciones = "<option value='0'>Elegir una sala</option>";
             foreach ($salas as $sala) {
@@ -66,16 +66,26 @@
             echo $items;
         break;
         case 'cargarBarrio':
-        if(isset($_POST['palabra'])){
-            $palabra = $_POST['palabra'];
-        }
-        $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio like '%$palabra%' LIMIT 5";
-        $barrios = $bd->ejecutarQuery($queryBarrio);
-        $items = "";
-        foreach ($barrios as $barrio) {
-            $items .= utf8_encode("<tr><td class='itemBarrio' data-barrio='".$barrio['Barrio']."'>".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>");
-        }
-        echo $items;
-    break;
+            if(isset($_POST['palabra'])){
+                $palabra = $_POST['palabra'];
+            }
+            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio like '%$palabra%' LIMIT 5";
+            $barrios = $bd->ejecutarQuery($queryBarrio);
+            $items = "";
+            foreach ($barrios as $barrio) {
+                $items .= utf8_encode("<tr><td class='itemBarrio' data-barrio='".$barrio['Barrio']."'>".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>");
+            }
+            echo $items;
+        break;
+        case 'registrarHC':
+            
+            parse_str($_POST['params'],$valores);
+            //prd($valores);          
+            
+            $queryInsert= "INSERT INTO `LibroNegro`.`HistoriaClinica` (`nroHC`, `ApellidoNombre`, `DNI`, `Sexo`, `Edad`, `Cama_idCama`, `Cama_Sala_idSala`, `Barrio_idBarrio`, `IntervencionMedica_idIntervencionMedica`, `Accidente_idAccidente`) 
+                            VALUES ('1', 'saf', '2', 'M', '13', '124', '142', '142', '124', '41')";
+
+
+        break;
     }
 ?>

@@ -123,16 +123,18 @@ var cEgreso = $("#cEgreso").val();
            $("#cEgresoRta").html("Campo Válido");
         }
 
-var params = $("form").serialize();
+    
+    var params = $("form").serialize();
 
     $.ajax({
-      url : 'libroNegro.php',
-      data : {},
+      url : 'libroNegro.php?op=registrarHC',
+      data : {
+        params: params
+      },
       type : 'POST',
       dataType : 'text',
 
       success : function(data){
-
 
         }
     });
