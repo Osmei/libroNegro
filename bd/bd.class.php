@@ -6,9 +6,9 @@ class bd{
     public function __construct(){        
         
         /**SANDRO CASA */
-        $this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
+        //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO OFI */
-        //$this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+        $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
         /**MAURI OFI */
         //$this->conn = new mysqli("localhost","root","f1882,cM-N","LibroNegro");
 

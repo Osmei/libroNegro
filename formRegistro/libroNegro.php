@@ -57,11 +57,11 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM libronegro.`cie-10` WHERE Cod like '%$palabra%' LIMIT 5";
+            $queryCie = "SELECT * FROM LibroNegro.`CIE-10` WHERE Cod like '%$palabra%' LIMIT 5";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= "<tr><td class='itemCie' data-cie='".$cie['Cod']." - ".$cie['Descripcion']."'>".$cie['Cod']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>";
+                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['Cod']." - ".$cie['Descripcion']."'>".$cie['Cod']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
             }
             echo $items;
         break;
@@ -69,11 +69,11 @@
         if(isset($_POST['palabra'])){
             $palabra = $_POST['palabra'];
         }
-        $queryBarrio = "SELECT * FROM libronegro.barrio WHERE Barrio like '%$palabra%' LIMIT 5";
+        $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio like '%$palabra%' LIMIT 5";
         $barrios = $bd->ejecutarQuery($queryBarrio);
         $items = "";
         foreach ($barrios as $barrio) {
-            $items .= "<tr><td class='itemBarrio' data-barrio='".$barrio['Barrio']."'>".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>";
+            $items .= utf8_encode("<tr><td class='itemBarrio' data-barrio='".$barrio['Barrio']."'>".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>");
         }
         echo $items;
     break;

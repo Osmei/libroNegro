@@ -1,6 +1,5 @@
 <?php
 
-
 require_once("includes/includes.php");
 
 $bd = new bd();
@@ -24,9 +23,9 @@ if($usuario == null){
     echo "NOPASS";
 }else{
     $queryUser = "SELECT * FROM Usuario WHERE nombreUsuario = '$usuario' and password = '$passwordEscriptado'";
-
+    
     $data = $bd->ejecutarQuery($queryUser);
-
+    
     if($data != null){
         echo "OK";
     }else{

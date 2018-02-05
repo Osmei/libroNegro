@@ -23,7 +23,7 @@ $(document).ready(function(){
                         $("#status").html("Usuario y/o contraseña incorrecto.");
                     break;
                     case 'OK':
-                       location.href="signInForm.html"; 
+                       location.href="formRegistro/signInForm.php"; 
                     break;                    
                 }
             }
