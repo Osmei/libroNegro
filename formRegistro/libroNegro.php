@@ -79,12 +79,23 @@
         break;
         case 'registrarHC':
             
-            parse_str($_POST['params'],$valores);
+            parse_str($_POST['params'],$params);
             //prd($valores);          
-            
-            $queryInsert= "INSERT INTO `LibroNegro`.`HistoriaClinica` (`nroHC`, `ApellidoNombre`, `DNI`, `Sexo`, `Edad`, `Cama_idCama`, `Cama_Sala_idSala`, `Barrio_idBarrio`, `IntervencionMedica_idIntervencionMedica`, `Accidente_idAccidente`) 
-                            VALUES ('1', 'saf', '2', 'M', '13', '124', '142', '142', '124', '41')";
+            if($params['sexo']==1){
+                $sexo = "M";
+            }else{
+                $sexo = "F";
+            }
 
+            $queryInsert= "INSERT INTO `LibroNegro`.`HistoriaClinica` (`nroHC`, `ApellidoNombre`, `DNI`, `Sexo`, `Edad`, `Cama_idCama`, `Cama_Sala_idSala`, `Barrio_idBarrio`, `IntervencionMedica_idIntervencionMedica`, `Accidente_idAccidente`) 
+                            VALUES (".$params['hClinica'].",'".$params['nCompleto']."','DNI','".$sexo."', ".$params['edad'].", '".$params['cama']."', '".$params['sala']."', 'IDBARRIO', '124', '41')";
+
+            /**
+             * - Falta DNI en el input, consultar mauri.
+             * - Falta idBarrio (sandro codear).
+             * - Falta Intervención Médica.
+             * - Falta idAccidente.
+             */
 
         break;
     }

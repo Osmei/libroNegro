@@ -5,9 +5,7 @@
 
     require_once("helpers.php");
 
-    
-
-    require_once($_SERVER['DOCUMENT_ROOT']."/bd/bd.class.php");
-    
+//  require_once("C:/xampp/htdocs/libroNegro/bd/bd.class.php");    
+    require_once("../bd/bd.class.php");
 
 ?>
