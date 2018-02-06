@@ -26,22 +26,6 @@ var nCompleto = $("#nCompleto").val();
            $("#nCompletoRta").addClass("correcto");
            $("#nCompletoRta").html("Campo Válido");
         }
-/*var sala = $("#sala").val();
-  if(sala==""||sala.length>=25||/^\s+$/.test(sala)){
-     $("#salaRta").addClass("incorrecto");
-     $("#salaRta").html("Datos incorrectos");
-        }else{
-           $("#salaRta").addClass("correcto");
-           $("#salaRta").html("Campo Válido");
-        }*/
-/*var cama = $("#cama").val(); 
-  if(cama==""||cama.length>=25||/^\s+$/.test(cama)){
-     $("#camaRta").addClass("incorrecto");
-     $("#camaRta").html("Datos incorrectos");
-        }else{
-           $("#camaRta").addClass("correcto");
-           $("#camaRta").html("Campo Válido");
-        }*/
 var sexo = $("#sexo").val();
   if(sexo==""||sexo.length>=25||/^\s+$/.test(sexo)){
      $("#sexoRta").addClass("incorrecto");
