@@ -42,7 +42,7 @@ h2 {
 form{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(1, 1fr); */
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 25px;
     padding: 10px;
     }
@@ -122,10 +122,12 @@ ul a{
 .incorrecto{
     color: red;
     font-size: 14px;
+    font-weight: bold;
     }
 .correcto{
     color: green;
     font-size: 14px;
+    font-weight: bold;
     }
 .modal{
     z-index:100000px;
