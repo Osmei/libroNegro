@@ -30,7 +30,7 @@ $(document).ready(function(){
 
           $(".grabarBarrio").click(function(){
             var contenido = $(this).parent().parent().children()[0];            console.log($(contenido).data('barrio'));
-            $("#ponerAquiBarrio").html("<input type='text' id='barrio' name='barrio' readonly class='form-control' value='"+$(contenido).data('barrio')+"'>");
+            $("#ponerAquiBarrio").html("<input type='text' class='claseInput' id='barrio' name='barrio' readonly class='form-control' value='"+$(contenido).data('barrio')+"'>");
             /*$("#listaRta").html("");
             $("#barrio").val("");*/
           });

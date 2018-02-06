@@ -1,7 +1,9 @@
 $(document).ready(function(){
   cargarOpcionesSelect();
 
-  $("#myBtnCarga").click(function(){
+  $("#myBtnCarga").click(function(e){
+      e.preventDefault();
+
      var hClinica = $("#hClinica").val();
      if(hClinica==""||Number.isNaN(hClinica)||hClinica.length>=8||/^\s+$/.test(hClinica)){
         $("#hClinicaRta").addClass("incorrecto");
@@ -19,7 +21,7 @@ var fIngreso = $("#fIngreso").val();
            $("#fIngresoRta").addClass("correcto");
            $("#fIngresoRta").html("Campo Válido");
         }
-
+        
 var nCompleto = $("#nCompleto").val();
   if(nCompleto==""||nCompleto.length>=25||/^\s+$/.test(nCompleto)){
      $("#nCompletoRta").addClass("incorrecto");
@@ -28,6 +30,8 @@ var nCompleto = $("#nCompleto").val();
            $("#nCompletoRta").addClass("correcto");
            $("#nCompletoRta").html("Campo Válido");
         }
+
+  console.log("SALA: "+$("#sala:selected").text());
 
 var sexo = $("#sexo").val();
   if(sexo==""||sexo.length>=25||/^\s+$/.test(sexo)){
@@ -55,24 +59,28 @@ var accidente = $("#tAccidente").val();
            $("#tAccidenteRta").addClass("correcto");
            $("#tAccidenteRta").html("Campo Válido");
         }
-        
-var cie10 = $("#cie10").val();
-  if(cie10==""||cie10.length>=25||/^\s+$/.test(cie10)){
-     $("#cie10Rta").addClass("incorrecto");
-     $("#cie10Rta").html("Datos incorrectos");
-        }else{
-           $("#cie10Rta").addClass("correcto");
-           $("#cie10Rta").html("Campo Válido");
-        }
 
-var barrio = $("#barrio").val();
-  if(barrio==""||barrio.length>=25||/^\s+$/.test(barrio)){
-     $("#barrioRta").addClass("incorrecto");
-     $("#barrioRta").html("Datos incorrectos");
-        }else{
-           $("#barrioRta").addClass("correcto");
-           $("#barrioRta").html("Campo Válido");
-        }
+/**
+ * esta condición me permite preguntar si existe el objeto.
+ * en este caso el input de cie-10
+ */
+if($("#cie10").length){  
+  $("#cie10Rta").addClass("correcto");
+  $("#cie10Rta").html("Campo Válido");  
+}else{
+  $("#cie10Rta").addClass("incorrecto");
+  $("#cie10Rta").html("Elegir cie-10");
+}
+
+if($("#barrio").length){
+  $("#barrioRta").addClass("correcto");
+  $("#barrioRta").html("Campo Válido");  
+}else{
+  $("#barrioRta").addClass("incorrecto");
+  $("#barrioRta").html("Elegir barrio");
+}
+
+
 
 var medico = $("#medico").val();
   if(medico==""||medico.length>=25||/^\s+$/.test(medico)){ 
@@ -101,14 +109,15 @@ var diagnostico = $("#diagnostico").val();
            $("#diagnosticoRta").html("Campo Válido");
         }
 
-var fAlta = $("#fAlta").val();
-  if(fAlta==""||fAlta.length>=25||/^\s+$/.test(fAlta)){
-     $("#fAltaRta").addClass("incorrecto");
-     $("#fAltaRta").html("Datos Incorrectos");
-        }else{
-           $("#fAltaRta").addClass("correcto");
-           $("#fALtaRta").html("Campo Válido");
-        }
+  var fAlta = $("#fAlta").val();
+  if(fAlta.length>0){
+    $("#fAltaRta").addClass("correcto");
+    $("#fALtaRta").html("Campo Válido");
+  }else{
+    $("#fAltaRta").addClass("incorrecto");
+    $("#fAltaRta").html("Datos Incorrectos");
+    
+  }
         
 var cEgreso = $("#cEgreso").val();
   if(cEgreso==""||cEgreso.length>=25||/^\s+$/.test(cEgreso)){ 

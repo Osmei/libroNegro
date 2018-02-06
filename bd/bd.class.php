@@ -13,7 +13,7 @@ class bd{
         /**SANDRO OFI */
         $this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
         /**MAURI OFI */
-        $this->conn = new mysqli("localhost","root","f1882,cM-N","LibroNegro");
+        //$this->conn = new mysqli("localhost","root","f1882,cM-N","LibroNegro");
 
         if(!$this->conn){
             return false;
