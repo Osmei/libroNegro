@@ -11,7 +11,7 @@
    
    <title>Libro Negro</title>
 
-   <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="../js/validarCampos.js"></script>
 </head>
@@ -21,29 +21,29 @@
   </header>   
   <div id="contenedor">
     <form id="formInput">
-      <div class="hc">
+      <div class="hc fondoDiv">
         <h2>Historia Clinica</h2>
         <input type="text" id="hClinica" name="hClinica">
         <div id="hClinicaRta"></div>
       </div>
-      <div class="fIngreso">   
+      <div class="fIngreso fondoDiv">   
         <h2>Fecha de Ingreso</h2>
-        <input type="date" id="fIngreso" name="fIngreso">
+        <input type="text" id="fIngreso" name="fIngreso">
         <div id="fIngresoRta"></div>
       </div>   
-      <div class="nCompleto">   
+      <div class="nCompleto fondoDiv">   
         <h2>Nombre</h2>
         <input type="text" id="nCompleto" name="nCompleto">
         <div id="nCompletoRta"></div>
       </div>
-      <div class="sala">   
+      <div class="sala fondoDiv">   
         <h2>Sala</h2>
         <!--input type="text" id="sala" name="sala"-->
         <select name="sala" id="sala">          
         </select>
         <div id="salaRta"></div>
         </div>   
-      <div class="cama">   
+      <div class="cama fondoDiv">   
         <h2>Cama</h2>
         <!--input type="text" id="cama" name="cama"-->
         <select name="cama" id="cama">
@@ -51,7 +51,7 @@
         </select>
         <div id="camaRta"></div>
       </div>   
-      <div class="sexo">   
+      <div class="sexo fondoDiv">   
         <h2>Sexo</h2>
         <!--input type="text" id="sexo" name="sexo"-->
         <select name="sexo" id="sexo">
@@ -61,50 +61,50 @@
         </select>
         <div id="sexoRta"></div>
       </div>   
-      <div class="edad">   
+      <div class="edad fondoDiv">   
         <h2>Edad</h2>
         <input type="text" id="edad" name="edad">
         <div id="edadRta"></div>
       </div>
-      <div class="accidente">   
+      <div class="accidente fondoDiv">   
         <h2>Accidente</h2>
         <input type="text" id="tAccidente" name="tAccidente">
         <div id="tAccidenteRta"></div>
       </div>
-      <div class="cie-10">   
+      <div class="cie-10 fondoDiv">   
         <h2>CIE-10</h2>
         <div id="ponerAquiCie"></div>
         <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>        
         <div id="cie10Rta"></div>
       </div>
-      <div class="barrio">   
+      <div class="barrio fondoDiv">   
         <h2>Barrio</h2>
         <div id="ponerAquiBarrio"></div>
-        <button class="btn btn-primary" id="elegirbarrio" data-toggle="modal" data-target="#modalBarrio">Elegir</button>
+          <button class="btn btn-primary" id="elegirbarrio" data-toggle="modal" data-target="#modalBarrio">Elegir</button>
         <div id="barrioRta"></div>
       </div>
-      <div class="medico">   
+      <div class="medico fondoDiv">   
         <h2>Médico</h2>
         <!--input type="text" id="medico" name="medico"-->
         <select name="medico" id="medico"></select>
         <div id="medicoRta"></div>
       </div>
-      <div class="operPract">   
+      <div class="operPract fondoDiv">   
         <h2>OperPract</h2>
         <input type="text" id="cPracticada" name="cPracticada">
         <div id="cPracticadaRta"></div>
       </div>
-      <div class="diagOper">   
+      <div class="diagOper fondoDiv">   
         <h2>DiagOper</h2>
         <input type="text" id="diagnostico" name="diagnostico">
         <div id="diagnosticoRta"></div>
       </div>
-      <div class="fechaAlta">   
+      <div class="fechaAlta fondoDiv">   
         <h2>Fecha de Alta</h2>
-        <input type="date" id="fAlta" name="fAlta">
+        <input type="text" id="fAlta" name="fAlta">
         <div id="fAltaRta"></div>
       </div>         
-      <div class="condEgreso">   
+      <div class="condEgreso fondoDiv">   
         <h2>Cond Egreso</h2>
         <input type="text" id="cEgreso" name="cEgreso">
       <div id="cEgresoRta"></div>
@@ -114,21 +114,6 @@
   <div class="submit">
     <button type="submit" id="myBtnCarga" class="btn-carga">Cargar</button>
   </div>
-  <footer>
-    <div class="content">
-      <div class="misRedes">
-        <ul>
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        </ul>    
-      </div>
-      <div class="legales">
-        <a href="#">@OsmeiG es Marca Registrada</a>
-      </div>
-    </div>   
-  </footer>
 </body>
 </html>
 

@@ -27,3 +27,19 @@ function checkCampos(obj){
    return true;
  }
 }  
+/*var sala = $("#sala").val();
+  if(sala==""||sala.length>=25||/^\s+$/.test(sala)){
+     $("#salaRta").addClass("incorrecto");
+     $("#salaRta").html("Datos incorrectos");
+        }else{
+           $("#salaRta").addClass("correcto");
+           $("#salaRta").html("Campo Válido");
+        }*/
+/*var cama = $("#cama").val(); 
+  if(cama==""||cama.length>=25||/^\s+$/.test(cama)){
+     $("#camaRta").addClass("incorrecto");
+     $("#camaRta").html("Datos incorrectos");
+        }else{
+           $("#camaRta").addClass("correcto");
+           $("#camaRta").html("Campo Válido");
+        }*/

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-}
+    }
 body{
     padding: 0;
     margin: 0;
@@ -23,37 +23,35 @@ header h1{
     font-size: 60px;
     text-align: center;
     padding: 25px;
-    z-index: 10;
     }
-.contenedor{
+#contenedor{
     max-width: 1200px;
-    height: 450px;
-    margin: 40px auto;
+    height: 650px;
+    margin: 20px auto;
     background: transparent;
-    border-radius: 7px;
+    border-radius: 15px;
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
-}
-.contenedor div{
+    }
+#contenedor .fondoDiv{
     background: rgb(254, 254, 255);
-    opacity: .7;
-}
-
-h2{
+    border-radius: 10px;
+    }    
+h2 {
     color: #262626; 
-}
+    }
 form{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 25px;
     padding: 10px;
-}
+    }
 form > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 2px;
-}
+    }
 form input{
     width: 60%; 
     height: 30px; 
@@ -124,11 +122,13 @@ ul a{
 .incorrecto{
     color: red;
     font-size: 14px;
-}
+    font-weight: bold;
+    }
 .correcto{
     color: green;
     font-size: 14px;
-}
+    font-weight: bold;
+    }
 .modal{
     z-index:100000px;
-}
+    }
