@@ -42,7 +42,7 @@
         <select name="sala" id="sala">          
         </select>
         <div id="salaRta"></div>
-        </div>   
+      </div>   
       <div class="cama fondoDiv">   
         <h2>Cama</h2>
         
@@ -52,8 +52,8 @@
         <div id="camaRta"></div>
       </div>   
       <div class="sexo fondoDiv">   
-        <h2>Sexo</h2>
         
+        <h2>Sexo</h2>
         <select name="sexo" id="sexo">
           <option value="0">Seleccione una opción</option>
           <option value="1">Masculino</option>

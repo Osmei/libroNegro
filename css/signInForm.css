@@ -130,5 +130,12 @@ ul a{
     font-weight: bold;
     }
 .modal{
+    background: #50cfc9b9;
     z-index:100000px;
     }
+.modal-content{
+    background: orange;
+    }
+input[type="text"]:placeholder{
+    color: brown;
+}

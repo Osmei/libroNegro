@@ -31,7 +31,7 @@ var nCompleto = $("#nCompleto").val();
            $("#nCompletoRta").html("Campo Válido");
         }
 
-  console.log("SALA: "+$("#sala:selected").text());
+console.log("SALA: "+$("#sala:selected").text());
 
 var sexo = $("#sexo").val();
   if(sexo==""||sexo.length>=25||/^\s+$/.test(sexo)){
@@ -83,7 +83,7 @@ if($("#barrio").length){
 
 
 var medico = $("#medico").val();
-  if(medico==""||medico.length>=25||/^\s+$/.test(medico)){ 
+  if(medico>=-1||/^\s+$/.test(medico)){ 
      $("#medicoRta").addClass("incorrecto");
      $("#medicoRta").html("Datos Incorrectos");
         }else{
@@ -109,7 +109,7 @@ var diagnostico = $("#diagnostico").val();
            $("#diagnosticoRta").html("Campo Válido");
         }
 
-  var fAlta = $("#fAlta").val();
+var fAlta = $("#fAlta").val();
   if(fAlta.length>0){
     $("#fAltaRta").addClass("correcto");
     $("#fALtaRta").html("Campo Válido");
