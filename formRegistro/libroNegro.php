@@ -31,7 +31,7 @@
             $camas = $bd->ejecutarQuery($queryCama);
             $opciones = "<option value='0'>Elegir una cama</option>";
             foreach ($camas as $cama) {
-                $opciones.="<option value='".$cama['idCama']."'>".$cama['descripcion']."</option>";
+                $opciones.="<option value='".$cama['nroCama']."'>".$cama['nroCama']."</option>";
             }
             echo $opciones;
         break;
@@ -53,23 +53,50 @@
             }
             echo $opciones;
         break;
+
         case 'cargarCie':
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE-10 LIKE '%$palabra%' LIMIT 5";
+            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE-10']." - ".$cie['Descripcion']."'>".$cie['Cod']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
             }
             echo $items;
         break;
+        case 'cargarCie1':
+            if(isset($_POST['palabra'])){
+                $palabra = $_POST['palabra'];
+            }
+            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' OR Descripcion LIKE '$palabra%' LIMIT 15";
+            $cies = $bd->ejecutarQuery($queryCie);
+            $items = "";
+            foreach ($cies as $cie) {
+                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+            }
+            echo $items;
+        break;
+        case 'cargarCie2':
+            if(isset($_POST['palabra'])){
+                $palabra = $_POST['palabra'];
+            }
+            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
+            $cies = $bd->ejecutarQuery($queryCie);
+            $items = "";
+            foreach ($cies as $cie) {
+                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+            }
+            echo $items;
+        break;
+
+
         case 'cargarBarrio':
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio LIKE '%$palabra%' LIMIT 5";
+            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE idBarrio LIKE '%$palabra%' OR barrio LIKE '$palabra%' LIMIT 15";
             $barrios = $bd->ejecutarQuery($queryBarrio);
             $items = "";
             foreach ($barrios as $barrio) {

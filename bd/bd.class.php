@@ -15,7 +15,7 @@ class bd{
         /**MAURI CASA */
         //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
         /**MAURI OFI */
-        $this->conn = new mysqli("mysql.urgencias.local","libronegro","f1882,cM-N","LibroNegro");
+        $this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","LibroNegro");
 
         if(!$this->conn){
             return false;

@@ -43,7 +43,7 @@ var sexo = $("#sexo").val();
         }
 
 var edad = $("#edad").val();
-  if(edad==""||edad.length>=25||/^\s+$/.test(edad)){
+  if(edad==""||edad.length>=110||/^\s+$/.test(edad)){
      $("#edadRta").addClass("incorrecto");
      $("#edadRta").html("Datos incorrectos");
         }else{
@@ -91,17 +91,26 @@ var medico = $("#medico").val();
            $("#medicoRta").html("Campo Válido");
         }
 
-var cPracticada = $("#cPracticada").val();
+var cieIntermedio = $("#elegircie100").val();
+  if (cieIntermedio==""|| /^\s+$/.test(cPracticada)) {
+    $("#cPracticadaRta").addClass("incorrecto");
+    $("#cPracticadaRta").html("Datos Incorrectos");
+      } else {
+        $("#cPracticadaRta").addClass("correcto");
+        $("#cPracticadaRta").html("Campo Válido");
+      }
+
+/* var cPracticada = $("#cPracticada").val();
   if(cPracticada==""||cPracticada.length>=25||/^\s+$/.test(cPracticada)){
      $("#cPracticadaRta").addClass("incorrecto");
      $("#cPracticadaRta").html("Datos Incorrectos");
         }else{
            $("#cPracticadaRta").addClass("correcto");
            $("#cPracticadaRta").html("Campo Válido");
-        }
+        }*/
 
 var diagnostico = $("#diagnostico").val();
-  if(diagnostico==""||diagnostico.length>=25||/^\s+$/.test(diagnostico)){
+  if(diagnostico==''||/^\s+$/.test(diagnostico)){
      $("#diagnosticoRta").addClass("incorrecto");
      $("#diagnosticoRta").html("Datos Incorrectos");
         }else{
@@ -120,8 +129,9 @@ var fAlta = $("#fAlta").val();
   }
         
 var cEgreso = $("#cEgreso").val();
-  if(cEgreso==""||cEgreso.length>=25||/^\s+$/.test(cEgreso)){ 
-     $("#cEgresoRta").addClass("incorrecto");
+  //if(cEgreso==""||cEgreso.length>=5){ 
+  if (cEgreso.value==""){   
+  $("#cEgresoRta").addClass("incorrecto");
      $("#cEgresoRta").html("Datos Incorrectos");
         }else{
            $("#cEgresoRta").addClass("correcto");
@@ -160,6 +170,39 @@ var cEgreso = $("#cEgreso").val();
         }
     });
   });
+  
+  $("#elegircie100").click(function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'modalCIE10Intermedio.php',
+      data: {
+
+      },
+      type: 'POST',
+      dataType: 'html',
+      success: function (data) {
+        $("#contenedor").append(data);
+        $('#modalCie100').modal('show');
+      }
+    });
+  });
+
+  $("#elegircie1000").click(function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'modalCIE10Egreso.php',
+      data: {
+
+      },
+      type: 'POST',
+      dataType: 'html',
+      success: function (data) {
+        $("#contenedor").append(data);
+        $('#modalCie1000').modal('show');
+      }
+    });
+  });
+
   $("#elegirbarrio").click(function(e){
     e.preventDefault();    
     $.ajax({

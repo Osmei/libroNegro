@@ -21,38 +21,41 @@
   </header>   
   <div id="contenedor">
     <form id="formInput" class="form">
+      
       <div class="hc fondoDiv">
         <h2>Historia Clinica</h2>
         <input type="text" id="hClinica" name="hClinica" class="claseInput">
         <div id="hClinicaRta"></div>
       </div>
+      
       <div class="fIngreso fondoDiv">   
         <h2>Fecha de Ingreso</h2>
         <input type="date" id="fIngreso" name="fIngreso" class="claseInput">
         <div id="fIngresoRta"></div>
       </div>   
+      
       <div class="nCompleto fondoDiv">   
         <h2>Nombre</h2>
         <input type="text" id="nCompleto" name="nCompleto" class="claseInput">
         <div id="nCompletoRta"></div>
       </div>
+      
       <div class="sala fondoDiv">   
         <h2>Sala</h2>
-        
         <select name="sala" id="sala">          
         </select>
         <div id="salaRta"></div>
       </div>   
+      
       <div class="cama fondoDiv">   
         <h2>Cama</h2>
-        
         <select name="cama" id="cama">
           <option>Seleccione una cama</option>
         </select>
         <div id="camaRta"></div>
       </div>   
+      
       <div class="sexo fondoDiv">   
-        
         <h2>Sexo</h2>
         <select name="sexo" id="sexo">
           <option value="0">Seleccione una opción</option>
@@ -61,54 +64,86 @@
         </select>
         <div id="sexoRta"></div>
       </div>   
+      
       <div class="edad fondoDiv">   
         <h2>Edad</h2>
         <input type="text" id="edad" name="edad" class="claseInput">
         <div id="edadRta"></div>
       </div>
+      
       <div class="accidente fondoDiv">   
         <h2>Accidente</h2>
         <input type="text" id="tAccidente" name="tAccidente" class="claseInput">
         <div id="tAccidenteRta"></div>
       </div>
+      
       <div class="cie-10 fondoDiv">   
         <h2>CIE-10-Ingreso</h2>
         <div id="ponerAquiCie" style="width:95%;"></div>
         <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>        
         <div id="cie10Rta"></div>
       </div>
+      
       <div class="barrio fondoDiv">   
         <h2>Barrio</h2>
         <div id="ponerAquiBarrio" style="width:95%;"></div>
           <button class="btn btn-primary" id="elegirbarrio" data-toggle="modal" data-target="#modalBarrio">Elegir</button>
         <div id="barrioRta"></div>
       </div>
+      
       <div class="medico fondoDiv">   
         <h2>Médico</h2>
-        
         <select name="medico" id="medico"></select>
         <div id="medicoRta"></div>
       </div>
-      <div class="operPract fondoDiv">   
+      
+      <div class="cie-10 fondoDiv">   
+        <h2>CIE-10-Intermedio</h2>
+        <div id="ponerAquiCie" style="width:80%"></div>
+        <button class="btn btn-primary" id="elegircie100" data-toggle="modal" data-target="#modalCie100">Elegir</button>        
+        <div id="cPracticadaRta"></div>
+      </div>
+      <!-- <div class="operPract fondoDiv">   
         <h2>OperPract</h2>
         <input type="text" id="cPracticada" name="cPracticada" class="claseInput">
         <div id="cPracticadaRta"></div>
+      </div> -->
+      
+      <div class="cie-10 fondoDiv">   
+        <h2>CIE-10-Egreso</h2>
+        <div id="ponerAquiCie" style="width:95%;"></div>
+        <button class="btn btn-primary" id="elegircie1000" data-toggle="modal" data-target="#modalCie1000">Elegir</button>        
+        <div id="diagnosticoRta"></div>
       </div>
-      <div class="diagOper fondoDiv">   
+      <!-- <div class="diagOper fondoDiv">   
         <h2>CIE-10-Quirúrgico</h2>
         <input type="text" id="diagnostico" name="diagnostico" class="claseInput">
         <div id="diagnosticoRta"></div>
-      </div>
+      </div> -->
+      
       <div class="fechaAlta fondoDiv">   
         <h2>Fecha de Alta</h2>
         <input type="date" id="fAlta" name="fAlta" class="claseInput">
         <div id="fAltaRta"></div>
-      </div>         
+      </div>      
+
       <div class="condEgreso fondoDiv">   
-        <h2>Condición del Egreso</h2>
+        <h2>CondEgreso</h2>
+        <select name="cEgreso" id="cEgreso">
+          <option value="0">Seleccione una opción</option>
+          <option value="1">Alta</option>
+          <option value="2">Fallecimiento</option>
+          <option value="3">Traslado</option>
+          <option value="4">Derivación</option>
+        </select>
+        <div id="cEgresoRta"></div>
+      </div>   
+      
+      <!--<div class="condEgreso fondoDiv">   
+        <h2>CondEgreso</h2>
         <input type="text" id="cEgreso" name="cEgreso" class="claseInput">
         <div id="cEgresoRta"></div>
-      </div>        
+      </div> -->        
     </form>   
     <div class="submit">
         <button type="submit" id="myBtnCarga" class="btn-carga">Cargar</button>
