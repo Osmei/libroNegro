@@ -12,8 +12,10 @@ class bd{
         //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO OFI */
         //$this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
+        /**MAURI CASA */
+        //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
         /**MAURI OFI */
-        $this->conn = new mysqli("localhost","root","f1882,cM-N","LibroNegro");
+        $this->conn = new mysqli("mysql.urgencias.local","libronegro","f1882,cM-N","LibroNegro");
 
         if(!$this->conn){
             return false;

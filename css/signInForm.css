@@ -26,8 +26,8 @@ header h1{
     }
 #contenedor{
     max-width: 1200px;
-    height: 650px;
-    margin: 20px auto;
+    height: 700px;
+    margin: 15px auto;
     background: transparent;
     border-radius: 15px;
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
@@ -54,7 +54,7 @@ form > div{
     }
 form .claseInput{
     width: 95%; 
-    //height: 50px;
+    /*height: 50px;*/
     background: rgb(254, 254, 255);
     outline: none;
     border: none;

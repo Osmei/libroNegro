@@ -72,7 +72,7 @@
         <div id="tAccidenteRta"></div>
       </div>
       <div class="cie-10 fondoDiv">   
-        <h2>CIE-10</h2>
+        <h2>CIE-10-Ingreso</h2>
         <div id="ponerAquiCie" style="width:95%;"></div>
         <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>        
         <div id="cie10Rta"></div>
@@ -95,7 +95,7 @@
         <div id="cPracticadaRta"></div>
       </div>
       <div class="diagOper fondoDiv">   
-        <h2>DiagOper</h2>
+        <h2>CIE-10-Quirúrgico</h2>
         <input type="text" id="diagnostico" name="diagnostico" class="claseInput">
         <div id="diagnosticoRta"></div>
       </div>
@@ -105,7 +105,7 @@
         <div id="fAltaRta"></div>
       </div>         
       <div class="condEgreso fondoDiv">   
-        <h2>Cond Egreso</h2>
+        <h2>Condición del Egreso</h2>
         <input type="text" id="cEgreso" name="cEgreso" class="claseInput">
         <div id="cEgresoRta"></div>
       </div>        

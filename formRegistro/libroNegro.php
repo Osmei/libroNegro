@@ -27,7 +27,7 @@
             if(isset($_POST['idSala'])){
                 $idSala = $_POST['idSala'];
             }
-            $queryCama = "SELECT * FROM Cama where Sala_idSala = $idSala";
+            $queryCama = "SELECT * FROM Cama WHERE Sala_idSala = $idSala";
             $camas = $bd->ejecutarQuery($queryCama);
             $opciones = "<option value='0'>Elegir una cama</option>";
             foreach ($camas as $cama) {
@@ -36,11 +36,11 @@
             echo $opciones;
         break;
         case 'cie10':
-            $queryCie = "SELECT * FROM LibroNegro.`CIE-10`"; 
+            $queryCie = "SELECT * FROM LibroNegro.CIE10"; 
             $cies = $bd->ejecutarQuery($queryCie);
             $opciones = "<option value='0'>Elegir una opción</option>";
             foreach ($cies as $cie) {
-                $opciones.="<option value='".$cie['Cod']."'>".$cie['Descripcion']."</option>";
+                $opciones.="<option value='".$cie['idCIE10']."'>".$cie['Descripcion']."</option>";
             }
             echo $opciones;
         break;
@@ -57,11 +57,11 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM LibroNegro.`CIE-10` WHERE Cod like '%$palabra%' LIMIT 5";
+            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE-10 LIKE '%$palabra%' LIMIT 5";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['Cod']." - ".$cie['Descripcion']."'>".$cie['Cod']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE-10']." - ".$cie['Descripcion']."'>".$cie['Cod']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
             }
             echo $items;
         break;
@@ -69,7 +69,7 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio like '%$palabra%' LIMIT 5";
+            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE Barrio LIKE '%$palabra%' LIMIT 5";
             $barrios = $bd->ejecutarQuery($queryBarrio);
             $items = "";
             foreach ($barrios as $barrio) {
