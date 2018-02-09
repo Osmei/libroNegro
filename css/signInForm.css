@@ -37,7 +37,8 @@ header h1{
     border-radius: 10px;
     }    
 h2 {
-    color: #262626; 
+    color: #c73e08;
+    font-weight: bold; 
     }
 form{
     display: grid;
@@ -54,22 +55,23 @@ form > div{
     }
 form .claseInput{
     width: 95%; 
-    /*height: 50px;*/
     background: rgb(254, 254, 255);
     outline: none;
     border: none;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 300;
     text-align: center;
     color: saddlebrown;  
     }
 select{
     width: 80%; 
+    height: 21px;
     background: rgb(254, 254, 255);
     border: none; 
     outline: none;
     color: brown;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 300;
     text-align: center;
     }
 .submit{
@@ -126,11 +128,13 @@ ul a{
     color: red;
     font-size: 14px;
     font-weight: bold;
+    transition: all .8s ease-in;
     }
 .correcto{
     color: green;
     font-size: 14px;
-    font-weight: bold;
+    font-style: oblique;
+    transition: all .8s ease-in;
     }
 .modal{
     background: #50cfc9b9;

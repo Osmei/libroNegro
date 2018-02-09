@@ -17,12 +17,13 @@
         case 'sala':
             $querySala = "SELECT * FROM LibroNegro.Sala";
             $salas = $bd->ejecutarQuery($querySala);
-            $opciones = "<option value='0'>Elegir una sala</option>";
+            $opciones = "<option value=''>Elegir una sala</option>";
             foreach ($salas as $sala) {
                 $opciones.="<option value='".$sala['idSala']."'>".$sala['nombreSala']."</option>";
             }
             echo $opciones;
         break;
+        
         case 'cama':
             if(isset($_POST['idSala'])){
                 $idSala = $_POST['idSala'];
@@ -35,6 +36,7 @@
             }
             echo $opciones;
         break;
+        
         case 'cie10':
             $queryCie = "SELECT * FROM LibroNegro.CIE10"; 
             $cies = $bd->ejecutarQuery($queryCie);
@@ -44,6 +46,7 @@
             }
             echo $opciones;
         break;
+        
         case 'medico':
             $queryMedico = "SELECT * FROM Medico"; 
             $medicos = $bd->ejecutarQuery($queryMedico);

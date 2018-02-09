@@ -50,7 +50,7 @@
       <div class="cama fondoDiv">   
         <h2>Cama</h2>
         <select name="cama" id="cama">
-          <option>Seleccione una cama</option>
+          <option value="">Seleccione una cama</option>
         </select>
         <div id="camaRta"></div>
       </div>   
@@ -58,7 +58,7 @@
       <div class="sexo fondoDiv">   
         <h2>Sexo</h2>
         <select name="sexo" id="sexo">
-          <option value="0">Seleccione una opción</option>
+          <option value="">Seleccione una opción</option>
           <option value="1">Masculino</option>
           <option value="2">Femenino</option>
         </select>
@@ -77,7 +77,7 @@
         <div id="tAccidenteRta"></div>
       </div>
       
-      <div class="cie-10 fondoDiv">   
+      <div class="cie-10-Ingreso fondoDiv">   
         <h2>CIE-10-Ingreso</h2>
         <div id="ponerAquiCie" style="width:95%;"></div>
         <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>        
@@ -97,29 +97,19 @@
         <div id="medicoRta"></div>
       </div>
       
-      <div class="cie-10 fondoDiv">   
+      <div class="cie-10-Intermedio fondoDiv">   
         <h2>CIE-10-Intermedio</h2>
-        <div id="ponerAquiCie" style="width:80%"></div>
-        <button class="btn btn-primary" id="elegircie100" data-toggle="modal" data-target="#modalCie100">Elegir</button>        
-        <div id="cPracticadaRta"></div>
+        <div id="ponerAquiCieB" style="width:80%"></div>
+        <button class="btn btn-primary" id="elegircie100" data-toggle="modalB" data-target="#modalCie100">Elegir</button>        
+        <div id="cie100Rta"></div>
       </div>
-      <!-- <div class="operPract fondoDiv">   
-        <h2>OperPract</h2>
-        <input type="text" id="cPracticada" name="cPracticada" class="claseInput">
-        <div id="cPracticadaRta"></div>
-      </div> -->
       
-      <div class="cie-10 fondoDiv">   
+      <div class="cie-10-Egreso fondoDiv">   
         <h2>CIE-10-Egreso</h2>
-        <div id="ponerAquiCie" style="width:95%;"></div>
-        <button class="btn btn-primary" id="elegircie1000" data-toggle="modal" data-target="#modalCie1000">Elegir</button>        
-        <div id="diagnosticoRta"></div>
+        <div id="ponerAquiCieC" style="width:95%;"></div>
+        <button class="btn btn-primary" id="elegircie1000" data-toggle="modalC" data-target="#modalCie1000">Elegir</button>        
+        <div id="cie1000Rta"></div>
       </div>
-      <!-- <div class="diagOper fondoDiv">   
-        <h2>CIE-10-Quirúrgico</h2>
-        <input type="text" id="diagnostico" name="diagnostico" class="claseInput">
-        <div id="diagnosticoRta"></div>
-      </div> -->
       
       <div class="fechaAlta fondoDiv">   
         <h2>Fecha de Alta</h2>
@@ -130,20 +120,14 @@
       <div class="condEgreso fondoDiv">   
         <h2>CondEgreso</h2>
         <select name="cEgreso" id="cEgreso">
-          <option value="0">Seleccione una opción</option>
+          <option value="" selected="selected">Seleccione una opción</option>
           <option value="1">Alta</option>
           <option value="2">Fallecimiento</option>
           <option value="3">Traslado</option>
           <option value="4">Derivación</option>
         </select>
         <div id="cEgresoRta"></div>
-      </div>   
-      
-      <!--<div class="condEgreso fondoDiv">   
-        <h2>CondEgreso</h2>
-        <input type="text" id="cEgreso" name="cEgreso" class="claseInput">
-        <div id="cEgresoRta"></div>
-      </div> -->        
+      </div>          
     </form>   
     <div class="submit">
         <button type="submit" id="myBtnCarga" class="btn-carga">Cargar</button>

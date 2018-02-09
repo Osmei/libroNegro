@@ -35,7 +35,8 @@ function checkCampos(obj){
            $("#salaRta").addClass("correcto");
            $("#salaRta").html("Campo Válido");
         }*/
-/*var cama = $("#cama").val(); 
+
+        /*var cama = $("#cama").val(); 
   if(cama==""||cama.length>=25||/^\s+$/.test(cama)){
      $("#camaRta").addClass("incorrecto");
      $("#camaRta").html("Datos incorrectos");
@@ -43,3 +44,6 @@ function checkCampos(obj){
            $("#camaRta").addClass("correcto");
            $("#camaRta").html("Campo Válido");
         }*/
+
+//console.log("SALA: "+$("#sala:selected").text());
+//console.log($("#sala").val());
