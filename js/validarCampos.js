@@ -145,7 +145,7 @@ if($("#cEgreso").val().trim() === '') {
     }      
     
     var params = $("form").serialize();
-
+    console.log(params);
     $.ajax({
       url : 'libroNegro.php?op=registrarHC',
       data : {

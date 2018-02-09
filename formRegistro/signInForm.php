@@ -35,9 +35,15 @@
       </div>   
       
       <div class="nCompleto fondoDiv">   
-        <h2>Nombre</h2>
+        <h2>Nombre y Apellido</h2>
         <input type="text" id="nCompleto" name="nCompleto" class="claseInput">
         <div id="nCompletoRta"></div>
+      </div>
+
+      <div class="dniC fondoDiv">   
+        <h2>DNI</h2>
+        <input type="text" id="dni" name="dni" class="claseInput">
+        <div id="dniRta"></div>
       </div>
       
       <div class="sala fondoDiv">   

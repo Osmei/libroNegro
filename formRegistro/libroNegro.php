@@ -110,7 +110,7 @@
         case 'registrarHC':
             
             parse_str($_POST['params'],$params);
-            //prd($valores);          
+            prd($params);          
             if($params['sexo']==1){
                 $sexo = "M";
             }else{

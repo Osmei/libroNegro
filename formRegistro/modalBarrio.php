@@ -5,7 +5,7 @@
       <h3 class="modal-title" id="exampleModalLabel">Elegir Barrio</h3>      
     </div>
     <div class="modal-body">
-      <input type="text" placeholder="Buscar por barrio" name="barrio" id="barrio" class="form-control" />
+      <input type="text" placeholder="Buscar por barrio" name="barrioMd" id="barrioMd" class="form-control" />
       <table class="table table-hover" id="listaRta">
         
       </table>
@@ -16,8 +16,8 @@
 
 <script>
 $(document).ready(function(){
-  $("#barrio").keyup(function(){
-    var palabra = $("#barrio").val();    
+  $("#barrioMd").keyup(function(){
+    var palabra = $("#barrioMd").val();    
     $.ajax({
       url : 'libroNegro.php?op=cargarBarrio',
       data : {
@@ -29,7 +29,7 @@ $(document).ready(function(){
           $("#listaRta").html(data);
 
           $(".grabarBarrio").click(function(){
-            var contenido = $(this).parent().parent().children()[0];            console.log($(contenido).data('barrio'));
+            var contenido = $(this).parent().parent().children()[0];
             $("#ponerAquiBarrio").html("<input type='text' class='claseInput' id='barrio' name='barrio' readonly class='form-control' value='"+$(contenido).data('barrio')+"'>");
             /*$("#listaRta").html("");
             $("#barrio").val("");*/

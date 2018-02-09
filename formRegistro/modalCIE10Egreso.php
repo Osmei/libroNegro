@@ -5,7 +5,7 @@
       <h3 class="modal-title" id="exampleModalLabel">Elegir CIE-10</h3>      
     </div>
     <div class="modal-body">
-      <input type="text" placeholder="Buscar por código" name="cie10Md" id="cie10Mdia" class="form-control" />
+      <input type="text" placeholder="Buscar por código" name="cie1000Md" id="cie1000Md" class="form-control" />
       <table class="table table-hover" id="listaRtaCie1000">
         
       </table>
@@ -16,8 +16,8 @@
 
 <script>
 $(document).ready(function(){
-  $("#cie10Mdia").keyup(function(){
-    var palabra = $("#cie10Mdia").val();    
+  $("#cie1000Md").keyup(function(){
+    var palabra = $("#cie1000Md").val();    
     $.ajax({
       url : 'libroNegro.php?op=cargarCie2',
       data : {
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
           $(".grabarCie").click(function(){
             var contenido = $(this).parent().parent().children()[0];            
-            $("#ponerAquiCieC").html("<input type='text'class='claseInput' id='cie1000' name='cie10' readonly value='"+$(contenido).data('cie')+"' >");
+            $("#ponerAquiCieC").html("<input type='text'class='claseInput' id='cie1000' name='cie1000' readonly value='"+$(contenido).data('cie')+"' >");
             //$("#listaRtaCie10").html("");
             //$("#cie10Md").val("");
           });
