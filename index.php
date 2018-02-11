@@ -1,6 +1,7 @@
 <?php
 
-require_once("includes/includes.php");
+require_once("includes/helpers.php");
+require_once("bd/bd.class.php");
 
 $bd = new bd();
 
