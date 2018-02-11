@@ -2,150 +2,197 @@ $(document).ready(function(){
   cargarOpcionesSelect();
 
   $("#myBtnCarga").click(function(e){
-      e.preventDefault();
+    e.preventDefault();
 
-     var hClinica = $("#hClinica").val();
-     if(hClinica==""||Number.isNaN(hClinica)||hClinica.length>=8||/^\s+$/.test(hClinica)){
-        $("#hClinicaRta").addClass("incorrecto");
-        $("#hClinicaRta").html("Datos Incorrectos");
-        }else{
-          $("#hClinicaRta").addClass("correcto");
-          $("#hClinicaRta").html("Campo Válido");
-        }  
-
-var fIngreso = $("#fIngreso").val();
-  if(fIngreso==""||/^\s+$/.test(fIngreso)){
-     $("#fIngresoRta").addClass("incorrecto");
-     $("#fIngresoRta").html("Datos incorrectos");
-        }else{
-           $("#fIngresoRta").addClass("correcto");
-           $("#fIngresoRta").html("Campo Válido");
-        }
-        
-var nCompleto = $("#nCompleto").val();
-  if(nCompleto==""||nCompleto.length>=25||/^\s+$/.test(nCompleto)){
-     $("#nCompletoRta").addClass("incorrecto");
-     $("#nCompletoRta").html("Datos incorrectos");
-        }else{
-           $("#nCompletoRta").addClass("correcto");
-           $("#nCompletoRta").html("Campo Válido");
-        }
-
-if($("#sala").val().trim() === '') {
-  $("#salaRta").addClass("incorrecto");
-  $("#salaRta").html("Datos Incorrectos");
+    var hayError = false;
+    var hClinica = $("#hClinica").val();
+    if(hClinica==""||Number.isNaN(hClinica)||hClinica.length>=8||/^\s+$/.test(hClinica)){
+      $("#hClinicaRta").addClass("incorrecto");
+      $("#hClinicaRta").html("Datos Incorrectos");
+      hayError = true;
     }else{
-      $("#salaRta").addClass("correcto");
-      $("#salaRta").html("Campo Válido");
-    }  
- 
-if ($("#cama").val().trim() === '') {
-  $("#camaRta").addClass("incorrecto");
-  $("#camaRta").html("Datos Incorrectos");
-    }else{
-      $("#camaRta").addClass("correcto");
-      $("#camaRta").html("Campo Válido");
-    }            
-
-if($("#sexo").val().trim() === '') {
-  $("#sexoRta").addClass("incorrecto");
-  $("#sexoRta").html("Datos Incorrectos");
-    }else{
-      $("#sexoRta").addClass("correcto");
-      $("#sexoRta").html("Campo Válido");
+      $("#hClinicaRta").addClass("correcto");
+      $("#hClinicaRta").html("Campo Válido");
+      hayError = false;
     }  
 
-var edad = $("#edad").val();
-  if(edad===""||edad.length>=3||/^\s+$/.test(edad)){
-     $("#edadRta").addClass("incorrecto");
-     $("#edadRta").html("Datos incorrectos");
-        }else{
-           $("#edadRta").addClass("correcto");
-           $("#edadRta").html("Campo Válido");
-        }
-
-/*var accidente = $("#tAccidente").val();
-  if(accidente==""||accidente.length>=25||/^\s+$/.test(accidente)){
-     $("#tAccidenteRta").addClass("incorrecto");
-     $("#tAccidenteRta").html("Datos incorrectos");
-        }else{
-           $("#tAccidenteRta").addClass("correcto");
-           $("#tAccidenteRta").html("Campo Válido");
-        }*/
-
-/**
- * esta condición me permite preguntar si existe el objeto.
- * en este caso el input de cie-10
- */
-if($("#cie10").length){  
-  $("#cie10Rta").addClass("correcto");
-  $("#cie10Rta").html("Campo Válido");  
-}else{
-  $("#cie10Rta").addClass("incorrecto");
-  $("#cie10Rta").html("Elegir Cie-10");
-}
-
-if($("#barrio").length){
-  $("#barrioRta").addClass("correcto");
-  $("#barrioRta").html("Campo Válido");  
-    } else {
-      $("#barrioRta").addClass("incorrecto");
-      $("#barrioRta").html("Datos Incorrectos");
+    var fIngreso = $("#fIngreso").val();
+    if(fIngreso==""||/^\s+$/.test(fIngreso)){
+      $("#fIngresoRta").addClass("incorrecto");
+      $("#fIngresoRta").html("Datos incorrectos");
+      hayError = true;
+    }else{
+      $("#fIngresoRta").addClass("correcto");
+      $("#fIngresoRta").html("Campo Válido");
+      hayError = false;
     }
+        
+  var nCompleto = $("#nCompleto").val();
+  if(nCompleto==""||nCompleto.length>=25||/^\s+$/.test(nCompleto)){
+    $("#nCompletoRta").addClass("incorrecto");
+    $("#nCompletoRta").html("Datos incorrectos");
+    hayError = true;
+  }else{
+    $("#nCompletoRta").addClass("correcto");
+    $("#nCompletoRta").html("Campo Válido");
+    hayError = false;
+  }
 
-var medico = $("#medico").val();
-  if(medico>=-1||/^\s+$/.test(medico)){ 
-     $("#medicoRta").addClass("incorrecto");
-     $("#medicoRta").html("Datos Incorrectos");
-        } else {
-           $("#medicoRta").addClass("correcto");
-           $("#medicoRta").html("Campo Válido");
-        }
+  var dni = $("#dni").val();
+  if(dni == ""){
+    $("#dniRta").addClass("incorrecto");
+    $("#dniRta").html("Datos incorrectos");
+    hayError = true;
+  }else{
+    $("#dniRta").addClass("correcto");
+    $("#dniRta").html("Campo Válido");
+    hayError = false;
+  }
 
-if ($("#cie100").length) {
-$("#cie100Rta").addClass("correcto");
-$("#cie100Rta").html("Campo Válido");
+  if($("#sala").val().trim() === '') {
+    $("#salaRta").addClass("incorrecto");
+    $("#salaRta").html("Datos Incorrectos");
+    hayError = true;
+  }else{
+    $("#salaRta").addClass("correcto");
+    $("#salaRta").html("Campo Válido");
+    hayError = false;
+  }  
+ 
+  if ($("#cama").val().trim() === '') {
+    $("#camaRta").addClass("incorrecto");
+    $("#camaRta").html("Datos Incorrectos");
+    hayError = true;
+  }else{
+    $("#camaRta").addClass("correcto");
+    $("#camaRta").html("Campo Válido");
+    hayError = false;
+  }            
+
+  if($("#sexo").val().trim() === '') {
+    $("#sexoRta").addClass("incorrecto");
+    $("#sexoRta").html("Datos Incorrectos");
+    hayError = true;
+  }else{
+    $("#sexoRta").addClass("correcto");
+    $("#sexoRta").html("Campo Válido");
+    hayError = false;
+  }  
+
+  var edad = $("#edad").val();
+  if(edad===""||edad.length>=3||/^\s+$/.test(edad)){
+    $("#edadRta").addClass("incorrecto");
+    $("#edadRta").html("Datos incorrectos");
+    hayError = true;
+  }else{
+    $("#edadRta").addClass("correcto");
+    $("#edadRta").html("Campo Válido");
+    hayError = false;
+  }
+
+  var accidente = $("#tAccidente").val();
+  if(accidente==""||accidente.length>=25||/^\s+$/.test(accidente)){
+    $("#tAccidenteRta").addClass("incorrecto");
+    $("#tAccidenteRta").html("Datos incorrectos");
+    hayError = true;
+  }else{
+    $("#tAccidenteRta").addClass("correcto");
+    $("#tAccidenteRta").html("Campo Válido");
+    hayError = false;
+  }
+
+  /**
+   * esta condición me permite preguntar si existe el objeto.
+   * en este caso el input de cie-10
+   */
+  if($("#cie10").length){  
+    $("#cie10Rta").addClass("correcto");
+    $("#cie10Rta").html("Campo Válido");  
+    hayError = false;
+  }else{
+    $("#cie10Rta").addClass("incorrecto");
+    $("#cie10Rta").html("Elegir Cie-10");
+    hayError = true;
+  }
+
+  if($("#barrio").length){
+    $("#barrioRta").addClass("correcto");
+    $("#barrioRta").html("Campo Válido");  
+    hayError = false;
+  } else {
+    $("#barrioRta").addClass("incorrecto");
+    $("#barrioRta").html("Datos Incorrectos");
+    hayError = true;
+  }
+
+  var medico = $("#medico").val();
+  if(medico!=0){ 
+    $("#medicoRta").addClass("correcto");
+    $("#medicoRta").html("Campo Válido");
+    hayError = false;
+  } else {
+    $("#medicoRta").addClass("incorrecto");
+    $("#medicoRta").html("Datos Incorrectos");
+    hayError = true;    
+  }
+
+  if ($("#cie100").length) {
+    $("#cie100Rta").addClass("correcto");
+    $("#cie100Rta").html("Campo Válido");
+    hayError = false;
   } else {
     $("#cie100Rta").addClass("incorrecto");
     $("#cie100Rta").html("Elegir Cie-10");
+    hayError = true;
   }   
 
-if ($("#cie1000").length) {
-  $("#cie1000Rta").addClass("correcto");
-  $("#cie1000Rta").html("Campo Válido");
-    } else {
-      $("#cie1000Rta").addClass("incorrecto");
-      $("#cie1000Rta").html("Elegir Cie-10");
-    }        
+  if ($("#cie1000").length) {
+    $("#cie1000Rta").addClass("correcto");
+    $("#cie1000Rta").html("Campo Válido");
+    hayError = false;
+  } else {
+    $("#cie1000Rta").addClass("incorrecto");
+    $("#cie1000Rta").html("Elegir Cie-10");
+    hayError = true;
+  }        
      
-var diagnostico = $("#diagnostico").val();
+  var diagnostico = $("#diagnostico").val();
   if(diagnostico==''||/^\s+$/.test(diagnostico)){
     $("#diagnosticoRta").addClass("incorrecto");
     $("#diagnosticoRta").html("Datos Incorrectos");
-      }else{
-        $("#diagnosticoRta").addClass("correcto");
-        $("#diagnosticoRta").html("Campo Válido");
-      }
+    hayError = true;
+  }else{
+    $("#diagnosticoRta").addClass("correcto");
+    $("#diagnosticoRta").html("Campo Válido");
+    hayError = false;
+  }
 
-var fAlta = $("#fAlta").val();
-  if(fAlta.length>0){
+  var fAlta = $("#fAlta").val();  
+  if(fAlta==""||/^\s+$/.test(fAlta)){
+    $("#fAltaRta").removeClass("correcto");
+    $("#fAltaRta").addClass("incorrecto");
+    $("#fAltaRta").html("Datos Incorrectos");
+    hayError = true;
+  }else{
+    $("#fAltaRta").removeClass("incorrecto");
     $("#fAltaRta").addClass("correcto");
-    $("#fALtaRta").html("Campo Válido");
-      }else{
-        $("#fAltaRta").addClass("incorrecto");
-        $("#fAltaRta").html("Datos Incorrectos");
-      }
-
-if($("#cEgreso").val().trim() === '') {
-  $("#cEgresoRta").addClass("incorrecto");
-  $("#cEgresoRta").html("Datos Incorrectos");
-    }else{
-      $("#cEgresoRta").addClass("correcto");
-      $("#cEgresoRta").html("Campo Válido");
-    }      
+    $("#fAltaRta").html("Campo Válido");
+    hayError = false;    
+  }
+   
+  if($("#cEgreso").val().trim() === '') {
+    $("#cEgresoRta").addClass("incorrecto");
+    $("#cEgresoRta").html("Datos Incorrectos");
+    hayError = true;
+  }else{
+    $("#cEgresoRta").addClass("correcto");
+    $("#cEgresoRta").html("Campo Válido");
+    hayError = false;
+  }      
     
+  if(!hayError){
     var params = $("form").serialize();
-    console.log(params);
+    
     $.ajax({
       url : 'libroNegro.php?op=registrarHC',
       data : {
@@ -153,12 +200,25 @@ if($("#cEgreso").val().trim() === '') {
       },
       type : 'POST',
       dataType : 'text',
-
       success : function(data){
-
+        switch (data) {
+          case 'OK':
+            alert("Historia Clínica agregada satisfactoriamente");
+          break;
+          case 'ERROR':
+            alert("Hubo un error intente mas tarde nuevamente o contactese con el administrador");
+          break;
+          case 'HCREPETIDA':
+            alert("Número de historia clínica repetida");
+          break;
         }
+      }
     });
-  });
+  }else{
+    alert("Debe completar correctamente todos los campos");
+  }
+  
+}); /** END CLICK GUARDAR BUTTON */
 
   $("#elegircie10").click(function(e){
     e.preventDefault();    

@@ -30,9 +30,7 @@ $(document).ready(function(){
 
           $(".grabarCie").click(function(){
             var contenido = $(this).parent().parent().children()[0];            
-            $("#ponerAquiCieC").html("<input type='text'class='claseInput' id='cie1000' name='cie1000' readonly value='"+$(contenido).data('cie')+"' >");
-            //$("#listaRtaCie10").html("");
-            //$("#cie10Md").val("");
+            $("#ponerAquiCieC").html("<input type='text'class='claseInput' id='cie1000' name='cie1000' readonly value='"+$(contenido).data('cie')+"'>");            
           });
         }
     });  

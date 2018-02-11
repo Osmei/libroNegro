@@ -52,7 +52,7 @@
             $medicos = $bd->ejecutarQuery($queryMedico);
             $opciones = "<option value='0'>Elegir una opción</option>";
             foreach ($medicos as $medico) {
-                $opciones.="<option value=''>".$medico['Nombre']." - ".$medico['DNI']."</option>";
+                $opciones.="<option value='".$medico['DNI']."'>".$medico['Nombre']." - ".$medico['DNI']."</option>";
             }
             echo $opciones;
         break;
@@ -65,7 +65,7 @@
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= "<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>";
             }
             echo $items;
         break;
@@ -77,7 +77,7 @@
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= "<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>";
             }
             echo $items;
         break;
@@ -89,7 +89,7 @@
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
-                $items .= utf8_encode("<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= "<tr><td class='itemCie' data-cie='".$cie['idCIE10']." - ".$cie['Descripcion']."'>".$cie['idCIE10']." - ".$cie['Descripcion']."</td><td><button class='btn btn-primary grabarCie' data-dismiss='modal'>Elegir</button></td></tr>";
             }
             echo $items;
         break;
@@ -103,30 +103,37 @@
             $barrios = $bd->ejecutarQuery($queryBarrio);
             $items = "";
             foreach ($barrios as $barrio) {
-                $items .= utf8_encode("<tr><td class='itemBarrio' data-barrio='".$barrio['Barrio']."'>".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>");
+                $items .= "<tr><td class='itemBarrio' data-barrio='".$barrio['idBarrio']." - ".$barrio['Barrio']."'>".$barrio['idBarrio']." - ".$barrio['Barrio']."</td><td><button class='btn btn-primary grabarBarrio' data-dismiss='modal'>Elegir</button></td></tr>";
             }
             echo $items;
         break;
-        case 'registrarHC':
-            
+        case 'registrarHC':            
             parse_str($_POST['params'],$params);
-            prd($params);          
+            
             if($params['sexo']==1){
                 $sexo = "M";
             }else{
                 $sexo = "F";
             }
 
-            $queryInsert= "INSERT INTO `LibroNegro`.`HistoriaClinica` (`nroHC`, `ApellidoNombre`, `DNI`, `Sexo`, `Edad`, `Cama_idCama`, `Cama_Sala_idSala`, `Barrio_idBarrio`, `IntervencionMedica_idIntervencionMedica`, `Accidente_idAccidente`) 
-                            VALUES (".$params['hClinica'].",'".$params['nCompleto']."','DNI','".$sexo."', ".$params['edad'].", '".$params['cama']."', '".$params['sala']."', 'IDBARRIO', '124', '41')";
-
-            /**
-             * - Falta DNI en el input, consultar mauri.
-             * - Falta idBarrio (sandro codear).
-             * - Falta Intervención Médica.
-             * - Falta idAccidente.
-             */
-
+            $queryBuscoHC = "SELECT nroHC from historiaclinica where nroHC=".$params['hClinica'];
+            $dato = $bd->ejecutarNonQuery($queryBuscoHC);
+            if($dato->num_rows == 0){
+                $idCIE10 = explode("-",$params['cie10'])[0];
+                $idCIE100 = explode("-",$params['cie100'])[0];
+                $idCIE1000 = explode("-",$params['cie1000'])[0];
+                $barrio = explode("-",$params['barrio'])[0];
+    
+                $queryInsert = "INSERT INTO `libronegro`.`historiaclinica` (`nroHC`, `fechaDeIngreso`, `ApellidoNombre`, `DNI`, `Sala_idSala`, `Cama_idCama`, `Sexo`, `Edad`, `Accidente`, `CIE10_idCIE10_ingreso`, `Barrio_idBarrio`, `Medico_idMedico`, `CIE10_idCIE10_intermedio`, `CIE10_idCIE10_egreso`, `fechaDeAlta`, `CondicionEgreso_idCondicionEgreso`) 
+                                VALUES (".$params['hClinica'].", '".$params['fIngreso']."', '".$params['nCompleto']."', '".$params['dni']."', ".$params['sala'].", ".$params['cama'].", '".$sexo."', ".$params['edad'].", '".$params['tAccidente']."', '".$idCIE10."', '".$barrio."', ".$params['medico'].", '".$idCIE100."', '".$idCIE1000."', '".$params['fAlta']."', ".$params['cEgreso'].")";            
+                if($bd->ejecutarNonQuery($queryInsert)){
+                    echo "OK";
+                }else{
+                    echo "ERROR";
+                }
+            }else{
+                echo "HCREPETIDA";
+            }                       
         break;
     }
 ?>

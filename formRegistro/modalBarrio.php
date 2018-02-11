@@ -29,8 +29,8 @@ $(document).ready(function(){
           $("#listaRta").html(data);
 
           $(".grabarBarrio").click(function(){
-            var contenido = $(this).parent().parent().children()[0];
-            $("#ponerAquiBarrio").html("<input type='text' class='claseInput' id='barrio' name='barrio' readonly class='form-control' value='"+$(contenido).data('barrio')+"'>");
+            var contenido = $(this).parent().parent().children()[0];  console.log(contenido);
+            $("#ponerAquiBarrio").html("<input type='text' class='claseInput' id='barrio' name='barrio' class='form-control' value='"+$(contenido).data('barrio')+"'>");
             /*$("#listaRta").html("");
             $("#barrio").val("");*/
           });
