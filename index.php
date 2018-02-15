@@ -17,16 +17,16 @@ if(isset($valores['password'])){
 
 $passwordEscriptado = md5(sha1($password));
 
-prd($passwordEscriptado);
+//prd($passwordEscriptado);
 if($usuario == null){
     echo "NOUSER";
 }elseif($password == null){
     echo "NOPASS";
 }else{
-    $queryUser = "SELECT * FROM Usuario WHERE nombreUsuario = '$usuario' and password = '$passwordEscriptado'";
+    $queryUser = "SELECT * FROM usuario WHERE nombreUsuario = '$usuario' AND password = '$passwordEscriptado'";
     
     $data = $bd->ejecutarQuery($queryUser);
-    
+    //prd($queryUser);
     if($data != null){
         echo "OK";
     }else{
