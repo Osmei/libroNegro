@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $("#volverB").click(function () {
+        location.href = "../formRegistro/signInForm.php";
+    })
+    $("#volverC").click(function () {
+        location.href = "../acciones/acciones.html";
+    })
     $(".activarModalInfo").click(function(){
         $("#todaLaInfoHC").remove();
         var tdHClinica = $(this).parent().parent().children()[0];
@@ -16,6 +22,5 @@ $(document).ready(function(){
                 $("#todaLaInfoHC").modal('show');                
             }
         });
-
     });
 });

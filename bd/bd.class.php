@@ -1,7 +1,7 @@
 <?php
-/*error_reporting(E_ALL);
+/* error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-ini_set("display_errors", 1);*/
+ini_set("display_errors", 1); */
 class bd{
 
     public $conn;
@@ -9,13 +9,13 @@ class bd{
     public function __construct(){        
         
         /**SANDRO CASA */
-        $this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
+        //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO OFI */
         //$this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
         /**MAURI CASA */
         //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
         /**MAURI OFI */
-        //$this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","LibroNegro");
+        $this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
 
         if(!$this->conn){
             return false;

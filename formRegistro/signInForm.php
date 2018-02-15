@@ -11,9 +11,10 @@
    
    <title>Libro Negro</title>
 
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="../js/jquery-3.3.1.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="../js/validarCampos.js"></script>
+
 </head>
 <body>
   <header>
@@ -112,7 +113,7 @@
       
       <div class="cie-10-Egreso fondoDiv">   
         <h2>CIE-10-Egreso</h2>
-        <div id="ponerAquiCieC" style="width:95%;"></div>
+        <div id="ponerAquiCieC" style="width:95%"></div>
         <button class="btn btn-primary" id="elegircie1000" data-toggle="modalC" data-target="#modalCie1000">Elegir</button>        
         <div id="cie1000Rta"></div>
       </div>
@@ -137,8 +138,73 @@
     </form>   
     <div class="submit">
         <button type="submit" id="myBtnCarga" class="btn-carga">Cargar</button>
+        <button type="submit" id="volverA" class="btn-carga">Página Principal</button>
     </div>
 </div>  
+
+<div class="modal fade" id="modalOK" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">GUUT!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Historia Clínica agregada satisfactoriamente</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Bien, sigamos entonces!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalERROR" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">GUUT!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Hubo un error, intente nuevamente más tarde o contáctese con el administrador</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Bien, creo que eso haré!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalHCREP" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">UPS!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Historia Clínica Repetida!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Bien, verificaré mi Error!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalElse" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">UPS!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Debe completar todos los campos</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Entendido, lo intentaré nuevamente!</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 

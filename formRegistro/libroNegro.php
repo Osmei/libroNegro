@@ -15,7 +15,7 @@
     
     switch ($_GET['op']) {
         case 'sala':
-            $querySala = "SELECT * FROM LibroNegro.Sala";
+            $querySala = "SELECT * FROM libronegro.sala";
             $salas = $bd->ejecutarQuery($querySala);
             $opciones = "<option value=''>Elegir una sala</option>";
             foreach ($salas as $sala) {
@@ -28,7 +28,7 @@
             if(isset($_POST['idSala'])){
                 $idSala = $_POST['idSala'];
             }
-            $queryCama = "SELECT * FROM Cama WHERE Sala_idSala = $idSala";
+            $queryCama = "SELECT * FROM libronegro.cama WHERE Sala_idSala = $idSala";
             $camas = $bd->ejecutarQuery($queryCama);
             $opciones = "<option value='0'>Elegir una cama</option>";
             foreach ($camas as $cama) {
@@ -38,7 +38,7 @@
         break;
         
         case 'cie10':
-            $queryCie = "SELECT * FROM LibroNegro.CIE10"; 
+            $queryCie = "SELECT * FROM libronegro.cie10"; 
             $cies = $bd->ejecutarQuery($queryCie);
             $opciones = "<option value='0'>Elegir una opción</option>";
             foreach ($cies as $cie) {
@@ -48,7 +48,7 @@
         break;
         
         case 'medico':
-            $queryMedico = "SELECT * FROM Medico"; 
+            $queryMedico = "SELECT * FROM libronegro.medico"; 
             $medicos = $bd->ejecutarQuery($queryMedico);
             $opciones = "<option value='0'>Elegir una opción</option>";
             foreach ($medicos as $medico) {
@@ -61,7 +61,7 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
+            $queryCie = "SELECT * FROM libronegro.cie10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
@@ -73,7 +73,7 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' OR Descripcion LIKE '$palabra%' LIMIT 15";
+            $queryCie = "SELECT * FROM libronegro.cie10 WHERE idCIE10 LIKE '%$palabra%' OR Descripcion LIKE '$palabra%' LIMIT 15";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
@@ -85,7 +85,7 @@
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryCie = "SELECT * FROM LibroNegro.CIE10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
+            $queryCie = "SELECT * FROM libronegro.cie10 WHERE idCIE10 LIKE '%$palabra%' LIMIT 15";
             $cies = $bd->ejecutarQuery($queryCie);
             $items = "";
             foreach ($cies as $cie) {
@@ -94,12 +94,11 @@
             echo $items;
         break;
 
-
         case 'cargarBarrio':
             if(isset($_POST['palabra'])){
                 $palabra = $_POST['palabra'];
             }
-            $queryBarrio = "SELECT * FROM LibroNegro.Barrio WHERE idBarrio LIKE '%$palabra%' OR barrio LIKE '$palabra%' LIMIT 15";
+            $queryBarrio = "SELECT * FROM libronegro.barrio WHERE idBarrio LIKE '%$palabra%' OR barrio LIKE '$palabra%' LIMIT 15";
             $barrios = $bd->ejecutarQuery($queryBarrio);
             $items = "";
             foreach ($barrios as $barrio) {
@@ -107,6 +106,7 @@
             }
             echo $items;
         break;
+        
         case 'registrarHC':            
             parse_str($_POST['params'],$params);
             

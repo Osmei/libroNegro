@@ -39,7 +39,7 @@
         <?php
           echo "Fecha de Ingreso: ". $row['fechaDeIngreso']."<br>";
           echo "Nombre y Apellido: ". $row['ApellidoNombre']."<br>";
-          echo "DNI: ".$row['DNI']."<br>";
+          echo "DNI: ". $row['DNI']."<br>";
           echo "Sala: ". $row['nombreSala']."<br>";
           echo "Cama: ". $row['nroCama']."<br>";
           echo "Sexo: ". $row['Sexo']."<br>";
@@ -59,7 +59,7 @@
         ?>      
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>        
       </div>
     </div>
   </div>

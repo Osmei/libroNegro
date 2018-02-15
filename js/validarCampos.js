@@ -1,6 +1,10 @@
 $(document).ready(function(){
   cargarOpcionesSelect();
 
+  $("#volverA").click(function() {
+    location.href="../acciones/acciones.html";
+  })
+  
   $("#myBtnCarga").click(function(e){
     e.preventDefault();
 
@@ -39,11 +43,13 @@ $(document).ready(function(){
   }
 
   var dni = $("#dni").val();
-  if(dni == ""){
+    if (dni == "" || Number.isNaN(dni)){
+    /*console.log("Esta vacío o no es un numero");*/
     $("#dniRta").addClass("incorrecto");
     $("#dniRta").html("Datos incorrectos");
     hayError = true;
   }else{
+    /*console.log("Asi esta bien");*/
     $("#dniRta").addClass("correcto");
     $("#dniRta").html("Campo Válido");
     hayError = false;
@@ -203,19 +209,19 @@ $(document).ready(function(){
       success : function(data){
         switch (data) {
           case 'OK':
-            alert("Historia Clínica agregada satisfactoriamente");
+            $("#modalOK").modal('show');
           break;
           case 'ERROR':
-            alert("Hubo un error intente mas tarde nuevamente o contactese con el administrador");
+            $("#modalERROR").modal('show');
           break;
           case 'HCREPETIDA':
-            alert("Número de historia clínica repetida");
+            $("#modalHCREP").modal('show');
           break;
         }
       }
     });
   }else{
-    alert("Debe completar correctamente todos los campos");
+    $("#modalElse").modal('show');
   }
   
 }); /** END CLICK GUARDAR BUTTON */

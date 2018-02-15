@@ -17,14 +17,21 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/lista.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/lista.js"></script>
 
     <title>Lista de Historias Clínicas Registradas</title>
+    
 </head>
 <body>
+    <header>
+        <button type="submit" id="volverB" class="btnLista">Cargar</button>
+        <button type="submit" id="volverC" class="btnLista">Página Principal</button>
+    </div>
+    </header>
     <div class="container">
         <div id="pegarModal">
             <table class="table table-bordered table-hover">
