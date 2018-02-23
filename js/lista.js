@@ -3,7 +3,7 @@ $(document).ready(function(){
         location.href = "../formRegistro/signInForm.php";
     })
     $("#volverC").click(function () {
-        location.href = "../acciones/acciones.html";
+        location.href = "../acciones.html";
     })
     $(".activarModalInfo").click(function(){
         $("#todaLaInfoHC").remove();

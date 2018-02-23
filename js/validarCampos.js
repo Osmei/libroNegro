@@ -2,7 +2,7 @@ $(document).ready(function(){
   cargarOpcionesSelect();
 
   $("#volverA").click(function() {
-    location.href="../acciones/acciones.html";
+    location.href="../acciones.html";
   })
   
   $("#myBtnCarga").click(function(e){

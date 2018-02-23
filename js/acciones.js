@@ -6,6 +6,6 @@ $(document).ready(function() {
       location.href = "listarHC/lista.php";
    })
    $("#estadistica").click(function () {
-      location.href = "acciones.html";
+      location.href = "estadistica/index.php";
    })
 });
