@@ -9,13 +9,18 @@ class bd{
     public function __construct(){        
         
         /**SANDRO CASA */
-        //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
+        $this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO OFI */
         //$this->conn = new mysqli("localhost","root","s4ndr0","LibroNegro");
         /**MAURI CASA */
         //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
+<<<<<<< HEAD
         /**MAURI OFI 1 */
         $this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
+=======
+        /**MAURI OFI */
+        //$this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
+>>>>>>> 55cff3145e8fa201f521d62a7479652514164054
 
 
         if(!$this->conn){
