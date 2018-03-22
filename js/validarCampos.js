@@ -2,7 +2,7 @@ $(document).ready(function(){
   cargarOpcionesSelect();
 
   $("#volverA").click(function() {
-    location.href="../acciones/acciones.html";
+    location.href="../acciones.html";
   })
   
   $("#myBtnCarga").click(function(e){
@@ -97,7 +97,7 @@ $(document).ready(function(){
   }
 
   var accidente = $("#tAccidente").val();
-  if(accidente==""||accidente.length>=25||/^\s+$/.test(accidente)){
+  if(accidente==""||/^\s+$/.test(accidente)){
     $("#tAccidenteRta").addClass("incorrecto");
     $("#tAccidenteRta").html("Datos incorrectos");
     hayError = true;

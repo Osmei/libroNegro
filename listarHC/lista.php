@@ -1,8 +1,8 @@
 <?php
     require_once("../includes/includes.php");
-    
+
     $bd = new bd();
-    
+
     $HCs = "SELECT * FROM historiaclinica";
     $historias = $bd->ejecutarNonQuery($HCs);
 
@@ -24,7 +24,7 @@
     <script src="../js/lista.js"></script>
 
     <title>Lista de Historias Clínicas Registradas</title>
-    
+
 </head>
 <body>
     <header>
@@ -39,7 +39,7 @@
                     <th>N° Historia Clínica</th>
                     <th>N° Apellido y Nombre</th>
                     <th>DNI</th>
-                    <th>Accidente</th>                
+                    <th>Accidente</th>
                     <th>Ver</th>
                 </thead>
                 <tbody>
@@ -51,10 +51,10 @@
                                 echo "<td>".$historia['DNI']."</td>";
                                 echo "<td>".$historia['Accidente']."</td>";
                                 echo "<td><button class='btn btn-primary activarModalInfo' data-toggle='modal' data-target='#todaLaInfoHC'>
-                                        Ver Historia Clínica Completa
-                                    </button></td>";
-                            echo "</tr>";                   
-                        }                    
+                                      Ver Historia Clínica Completa
+                                      </button></td>";
+                                echo "</tr>";
+                        }
                     ?>
                 </tbody>
             </table>

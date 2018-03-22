@@ -80,7 +80,7 @@
       
       <div class="accidente fondoDiv">   
         <h2>Accidente</h2>
-        <input type="text" id="tAccidente" name="tAccidente" class="claseInput">
+        <input type="text" id="te" name="tAccidente" class="claseInput">
         <div id="tAccidenteRta"></div>
       </div>
       

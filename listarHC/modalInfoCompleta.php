@@ -37,22 +37,22 @@
       </div>
       <div class="modal-body">
         <?php
-          echo "Fecha de Ingreso: ". $row['fechaDeIngreso']."<br>";
-          echo "Nombre y Apellido: ". $row['ApellidoNombre']."<br>";
-          echo "DNI: ". $row['DNI']."<br>";
-          echo "Sala: ". $row['nombreSala']."<br>";
-          echo "Cama: ". $row['nroCama']."<br>";
-          echo "Sexo: ". $row['Sexo']."<br>";
-          echo "Edad: ". $row['Edad']."<br>";
-          echo "Accidente: ". $row['Accidente']."<br>";
-          echo "CIE 10 - Ingreso: ". $row['CIE10_idCIE10_ingreso']."<br>";
-          echo "Barrio: ". $row['barrio']."<br>";
-          echo "Médico: ". $row['Medico_idMedico']." - ".$row['Nombre']."<br>";
-          echo "CIE 10 - Intermedio: ". $row['CIE10_idCIE10_intermedio']."<br>";
-          echo "CIE 10 - Egreso: ". $row['CIE10_idCIE10_egreso']."<br>";
-          echo "Edad: ". $row['Edad']."<br>";
-          echo "Fecha de Alta: ". $row['fechaDeAlta']."<br>";
-          echo "Condición de Egreso: ". $row['CausaEgreso']."<br>";
+          echo "<span> Fecha de Ingreso: </span> ". $row['fechaDeIngreso']."<br>";
+          echo "<span> Nombre y Apellido: </span> ". $row['ApellidoNombre']."<br>";
+          echo "<span> DNI: </span> ". $row['DNI']."<br>";
+          echo "<span> Sala: </span> ". $row['nombreSala']."<br>";
+          echo "<span> Cama: </span> ". $row['nroCama']."<br>";
+          echo "<span> Sexo: </span> ". $row['Sexo']."<br>";
+          echo "<span> Edad: </span> ". $row['Edad']."<br>";
+          echo "<span> Accidente: </span> ". $row['Accidente']."<br>";
+          echo "<span> CIE 10 - Ingreso: </span> ". $row['CIE10_idCIE10_ingreso']."<br>";
+          echo "<span> Barrio: </span> ". $row['barrio']."<br>";
+          echo "<span> Médico: </span> ". $row['Medico_idMedico']." - ".$row['Nombre']."<br>";
+          echo "<span> CIE 10 - Intermedio: </span> ". $row['CIE10_idCIE10_intermedio']."<br>";
+          echo "<span> CIE 10 - Egreso: </span> ". $row['CIE10_idCIE10_egreso']."<br>";
+          echo "<span> Edad: </span> ". $row['Edad']."<br>";
+          echo "<span> Fecha de Alta: </span> ". $row['fechaDeAlta']."<br>";
+          echo "<span> Condición de Egreso: </span> ". $row['CausaEgreso']."<br>";
         ?>
         <?php
           }

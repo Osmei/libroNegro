@@ -1,16 +1,17 @@
-body{
+body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
    background : url(../img/panecillos.jpg);
    background-size: cover; 
+   background-repeat: no-repeat;
 }
-header{
+header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-.btnLista{
+   }
+.btnLista {
    border: none;
    border-radius: 3px;
    /*background: orange;*/
@@ -20,50 +21,55 @@ header{
    font-weight: bold;
    font-size: 16px;
    margin: 20px 40px 10px 40px;
-}
-.btnLista:hover{
+   }
+.btnLista:hover {
    background: goldenrod;
    color: #4444cf;
-}
-.container{
+   }
+.container {
    /* background: url(../img/vintage.jpg);
    background-size: cover;
    background-repeat: no-repeat; */
    margin-top: 0px; 
-}
-.table{
+   }
+.table {
    border: 2px solid goldenrod;
-}
+   }
 th{
    color: brown;
    font-size: 22px;
    font-weight: bold;
    text-align: center;
-}
-tr{
+   }
+tr {
    color: #151515;
    font-size: 18px;
    font-weight: bold;
    cursor: pointer;
-}
-tr:hover{
+   }
+tr:hover {
    font-size: 20px;
    color: goldenrod;
    pointer-events: all;
-}
+   }
 h4{
    color: #262626;
    font-size: 22px;
    font-weight: bold;
    text-align: center;
-}
-.modal-body{
+   }
+.modal-body {
    background: orange;
    color: black;
    font-size: 18px;
    font-weight: 300;
-}
-.modal-footer button{
+   }
+.modal-body span {
+   color: #fff;
+   font-size: 20px;
+   font-weight: bold;
+   }
+.modal-footer button {
    background: orange;
    font-weight: bold;
-}
+   }

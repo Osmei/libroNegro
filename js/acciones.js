@@ -1,4 +1,7 @@
 $(document).ready(function() {
+   $("#admision").click(function () {
+      location.href = "admision.html";
+   })
    $("#carga").click(function () {
       location.href = "formRegistro/signInForm.php";
    })

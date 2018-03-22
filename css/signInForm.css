@@ -69,8 +69,14 @@ select{
     border: none; 
     outline: none;
     color: brown;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    }
+input{
+    color: brown;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
     }
 .submit{
@@ -87,7 +93,7 @@ select{
     font-size: 20px;
     font-weight: bolder;
     background: transparent;
-    color: #262626;
+    color: purple;
     border-radius: 10px;
     cursor: pointer;
     transition: .7s;
@@ -95,7 +101,6 @@ select{
 .btn-carga:hover{
     background: white;
     color: rgb(143, 9, 143);
-    border: none;
     }
 footer{
     box-shadow: 0 5px 5px rgba(0,0,0,.2);
