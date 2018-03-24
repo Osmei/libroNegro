@@ -4,7 +4,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="css/admision.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+   <link rel="stylesheet" href="../css/admision.css">
+   <script src="admision.js"></script>
    <title>Admisión</title>
 </head>
 <body>
@@ -12,8 +15,8 @@
     <div class="sector">
       <h2>Sector</h2>
       <br>
-      <select name="sector_slct" id="sector">
-        <option value="">Sector</option>
+      <select name="sector" id="sector">
+        
       </select>
     </div>
     <form action="" name="formAdmision" id="formAdmision">
