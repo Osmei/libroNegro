@@ -11,52 +11,55 @@
    <title>Admisión</title>
 </head>
 <body>
-  <div class="container">
-    <div class="sector">
-      <h2>Sector</h2>
-      <br>
-      <select name="sector" id="sector">
-        
-      </select>
-    </div>
+  <div class="container">    
     <form action="" name="formAdmision" id="formAdmision">
+      <div class="sector">
+        <h2>Sector</h2>
+        <br>
+        <select name="sector" id="sector">
+          
+        </select>
+      </div>
       <div class="cama">         
         <h2>Cama</h2>
-        <input type="text" id="cama">
+        <input type="text" id="cama" name="cama">
       </div>
-      
+      <div class="nya">
+        <h2>Nombre y Apellido</h2>
+        <input type="text" id="nya" name="nya">
+      </div>
       <div class="edad">
         <h2>Edad</h2>
-        <input type="text" id="edad">
+        <input type="text" id="edad" name="edad">
       </div>
       
       <div class="diagnostico">
         <h2>Diagnóstico</h2>
-        <input type="text" id="diagnostico">
+        <input type="text" id="diagnostico" name="diagnostico">
       </div>
       
       <div class="observaciones">
         <h2>Observaciones</h2>
-        <input type="text" id="observaciones">
+        <input type="text" id="observaciones" name="observaciones">
       </div>
 
       <div class="ingreso">
-        <h2>Ingreso</h2>
-        <input type="text" id="ingreso">
+        <h2>Fecha de Ingreso</h2>
+        <input type="date" id="ingreso" name="ingreso">
       </div>
 
       <div class="hc">
         <h2>Nro de H.C</h2>
-        <input type="text" id="hc">
+        <input type="text" id="hc" name="hc">
       </div>
 
       <div class="obraSocial">
         <h2>Art-Obra Social-Mot.Ingreso</h2>
-        <input type="text" id="obraSocial">
+        <input type="text" id="obraSocial" name="obraSocial">
       </div>
       
       <div class="button" id="btnCarga">
-        <input type="submit">
+        <input type="submit" value="Registrar" id="btnReg">        
       </div>
     </form>
   </div>

@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `libronegro` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `libronegro`;
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: libronegro
 -- ------------------------------------------------------
--- Server version	5.7.19-log
+-- Server version	5.7.21-0ubuntu0.17.10.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,6 +16,38 @@ USE `libronegro`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `admision`
+--
+
+DROP TABLE IF EXISTS `admision`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admision` (
+  `idAdmision` int(11) NOT NULL AUTO_INCREMENT,
+  `cama` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
+  `edad` varchar(2) COLLATE utf8_spanish2_ci NOT NULL,
+  `diagnostico` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `observaciones` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `idHistClinica` int(11) NOT NULL,
+  `obraSocial` varchar(45) COLLATE utf8_spanish2_ci NOT NULL,
+  `idSectorAdmision` int(11) NOT NULL,
+  `nombreApellido` varchar(45) COLLATE utf8_spanish2_ci NOT NULL,
+  `fechaIngreso` date NOT NULL,
+  PRIMARY KEY (`idAdmision`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admision`
+--
+
+LOCK TABLES `admision` WRITE;
+/*!40000 ALTER TABLE `admision` DISABLE KEYS */;
+INSERT INTO `admision` VALUES (1,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(2,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(3,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(4,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',0,'sfaasf','2018-03-06'),(5,'2','46','fasfsa','asf',12,'sfa',1,'saf','2018-03-06'),(6,'1','21','sfa','asf',12,'fa',1,'fas','2018-03-21'),(7,'12','12','asf','rwq',12,'wrq',3,'afwqr','2018-03-14'),(8,'12','31','afssaf','sfasaf',12,'asfsfa',1,'safsafsa','2018-03-20'),(9,'12','11','asfasf','safsfa',12,'asf',1,'asf','2018-03-14'),(10,'12','11','asfasf','safsfa',12,'asf',4,'asf','2018-03-14'),(11,'12','11','asfasf','safsfa',12,'asf',3,'asf','2018-03-14');
+/*!40000 ALTER TABLE `admision` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `barrio`
@@ -336,6 +368,30 @@ INSERT INTO `sala` VALUES (1,'Guardia'),(2,'Sector A'),(3,'Sector C'),(4,'Shock 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `sectoradmision`
+--
+
+DROP TABLE IF EXISTS `sectoradmision`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sectoradmision` (
+  `idSector` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(45) COLLATE utf8_spanish2_ci NOT NULL,
+  PRIMARY KEY (`idSector`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sectoradmision`
+--
+
+LOCK TABLES `sectoradmision` WRITE;
+/*!40000 ALTER TABLE `sectoradmision` DISABLE KEYS */;
+INSERT INTO `sectoradmision` VALUES (1,'Sector A'),(2,'Sector C'),(3,'UTI'),(4,'ShockRoom');
+/*!40000 ALTER TABLE `sectoradmision` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `urgenciamedica`
 --
 
@@ -375,7 +431,7 @@ CREATE TABLE `usuario` (
   `nombreUsuario` varchar(45) COLLATE utf8_spanish2_ci NOT NULL,
   `password` varchar(45) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -384,6 +440,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (2,'admin','2be595df63390048fa6385e35a8a5e05');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -396,4 +453,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-11 16:38:33
+-- Dump completed on 2018-03-24 18:05:36

@@ -9,6 +9,29 @@ $(document).ready(function(){
         dataType : 'html',      
         success : function(data){    
             $("#sector").html(data);                  
-          }
-      });
+        }
+    });
+    $("#btnReg").click(function(event){
+        event.preventDefault();        
+        var params = $("#formAdmision").serialize();
+        var sector = $( "#sector option:selected" ).text();             
+        console.log(sector);
+        $.ajax({
+            url : 'switch.php?op=registrarAdmision',
+            data : {
+                params:params
+            },
+            type : 'POST',
+            dataType : 'text',      
+            success : function(data){    
+                if(data == "OK"){
+                    alert("Admision registrada correctamente");
+                    
+                    $("input[type=text]").val("");
+                    $("input[type=date]").val("");                                        
+                    location.reload();
+                }
+            }
+        });
+    });
 });
