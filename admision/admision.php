@@ -62,6 +62,9 @@
         <input type="submit" value="Registrar" id="btnReg">        
       </div>
     </form>
+    <div>
+      <input type="button" value="Ver Admisiones Cargadas" id="btnAdmiCargadas">
+    </div>
   </div>
 </body>
 </html>

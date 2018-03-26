@@ -34,4 +34,8 @@ $(document).ready(function(){
             }
         });
     });
+
+    $("#btnAdmiCargadas").click(function(){        
+        location.href="listaAdmisiones.php";
+    });
 });

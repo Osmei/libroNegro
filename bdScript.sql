@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `libronegro` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `libronegro` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish2_ci */;
 USE `libronegro`;
 -- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
 --
@@ -45,7 +45,7 @@ CREATE TABLE `admision` (
 
 LOCK TABLES `admision` WRITE;
 /*!40000 ALTER TABLE `admision` DISABLE KEYS */;
-INSERT INTO `admision` VALUES (1,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(2,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(3,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(4,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',0,'sfaasf','2018-03-06'),(5,'2','46','fasfsa','asf',12,'sfa',1,'saf','2018-03-06'),(6,'1','21','sfa','asf',12,'fa',1,'fas','2018-03-21'),(7,'12','12','asf','rwq',12,'wrq',3,'afwqr','2018-03-14'),(8,'12','31','afssaf','sfasaf',12,'asfsfa',1,'safsafsa','2018-03-20'),(9,'12','11','asfasf','safsfa',12,'asf',1,'asf','2018-03-14'),(10,'12','11','asfasf','safsfa',12,'asf',4,'asf','2018-03-14'),(11,'12','11','asfasf','safsfa',12,'asf',3,'asf','2018-03-14');
+INSERT INTO `admision` VALUES (1,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(2,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(3,'42','12','safasfsa','afsfsaasf',2,'sfaasfsfa',2,'sfaasf','2018-03-06'),(5,'2','46','fasfsa','asf',12,'sfa',1,'saf','2018-03-06'),(6,'1','21','sfa','asf',12,'fa',1,'fas','2018-03-21'),(7,'12','12','asf','rwq',12,'wrq',3,'afwqr','2018-03-14'),(8,'12','31','afssaf','sfasaf',12,'asfsfa',1,'safsafsa','2018-03-20'),(9,'12','11','asfasf','safsfa',12,'asf',1,'asf','2018-03-14'),(10,'12','11','asfasf','safsfa',12,'asf',4,'asf','2018-03-14'),(11,'12','11','asfasf','safsfa',12,'asf',3,'asf','2018-03-14');
 /*!40000 ALTER TABLE `admision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,10 +106,10 @@ DROP TABLE IF EXISTS `cie10`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cie10` (
-  `idCIE10` varchar(3) NOT NULL,
-  `Descripcion` varchar(200) DEFAULT NULL,
+  `idCIE10` varchar(3) CHARACTER SET utf8 NOT NULL,
+  `Descripcion` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`idCIE10`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -260,7 +260,7 @@ CREATE TABLE `historiaclinica` (
 
 LOCK TABLES `historiaclinica` WRITE;
 /*!40000 ALTER TABLE `historiaclinica` DISABLE KEYS */;
-INSERT INTO `historiaclinica` VALUES (12,'2018-01-31','fas','1234',1,1,'F',23,'afss','G00 ',163,13701481,'A23 ','S04 ','2018-02-21',2),(123,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(124,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(125,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(412,'2018-02-15','fas','53',2,5,'M',12,'afs','T01 ',170,13963248,'B18 ','R02 ','2018-02-06',2),(12345,'2018-02-06','safsfas','12345',4,10,'F',11,'safsaf','F01 ',163,13963248,'F54 ','R00 ','2018-02-11',2);
+INSERT INTO `historiaclinica` VALUES (12,'2018-01-31','fas','1234',1,1,'F',23,'afss','G00 ',163,13701481,'A23 ','S04 ','2018-02-21',2),(123,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(124,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(125,'2018-02-06','sfaasf','1542',5,2,'F',32,'afs','D00 ',377,11052278,'A15 ','G03 ','2018-02-21',3),(258,'2018-03-08','Sandro','123456',1,1,'M',12,'fassa','F01 ',169,13681158,'W00 ','H00 ','2018-03-14',2),(313,'2018-03-09','fsa','412',3,4,'M',2,'qrwwrq','A02 ',346,13701481,'B70 ','T01 ','2018-03-22',4),(412,'2018-02-15','fas','53',2,5,'M',12,'afs','T01 ',170,13963248,'B18 ','R02 ','2018-02-06',2),(1246,'2018-03-22','rwqrwq','241',2,3,'F',42,'sfaf','R00 ',353,13684589,'B06 ','R02 ','2018-03-21',4),(12345,'2018-02-06','safsfas','12345',4,10,'F',11,'safsaf','F01 ',163,13963248,'F54 ','R00 ','2018-02-11',2),(222222,'2012-07-16','Camargo Franco','',3,14,'M',17,'A.T','V23 ',403,12876422,'V23 ','S82 ','2012-07-18',1),(377194,'2012-07-17','Bazan Carlos','',3,3,'M',24,'A.T','V28 ',345,13221766,'V28 ','S82 ','2012-07-20',1),(754413,'2012-07-16','Velez Martin','',3,2,'M',28,'A.T','V23 ',358,20150032,'T88 ','T88 ','2012-07-18',1),(871641,'2012-07-16','Alcazar Luis','',2,14,'M',20,'A.T','V20 ',272,27920243,'V20 ','T14 ','2012-07-19',1),(873164,'2012-07-17','Vargas María','',3,18,'F',22,'A.T','V23 ',375,26201115,'V23 ','S52 ','2012-07-18',1),(874192,'2012-07-16','Migueles Dario','',3,13,'M',32,'A.T','V23 ',397,12998821,'V23 ','S82 ','2012-07-17',1),(874827,'2012-07-16','Andrada David','',3,15,'M',20,'A.T','V23 ',61,27776203,'V23 ','S82 ','2012-07-18',1),(876238,'2012-07-16','Camargo Franco','',3,14,'M',17,'A.T','V23 ',403,12876422,'','S82 ','2012-07-18',1),(876350,'2012-07-08','Garrido Adrian','',1,1,'M',26,'A.T','S06 ',0,25002060,'S06 ','S06 ','2012-10-09',1),(876361,'2012-07-08','Castillo Daniel','',4,1,'M',26,'A.T','V23 ',452,28426173,'V23 ','S72 ','2012-07-30',1),(877083,'2012-07-16','Benito Felipe','',4,3,'M',79,'A.T','V03 ',174,20268810,'V03 ','S06 ','2012-07-18',1),(877134,'2012-07-17','Aguilar Alexis','',2,7,'M',17,'H.A.F','W34 ',452,20380092,'W34 ','S72 ','2012-07-30',1),(877143,'2012-07-17','Bazan Damian','',3,13,'M',32,'H.A.F','W34 ',380,8390302,'W34 ','S82 ','2012-08-02',1),(877176,'2012-07-17','Figueroa Gerardo','',3,5,'M',29,'A.T','V23 ',296,11971709,'V23 ','S82 ','2012-07-24',1),(877230,'2012-07-17','Cataño Laura','',4,4,'F',17,'A.T','V20 ',186,13221766,'V20 ','S06 ','2012-07-20',1),(877253,'2012-07-18','Porta Alenjandro','',4,1,'M',70,'H.A.F','W34 ',0,28428772,'W34 ','W34 ','2012-07-27',1),(1234567,'2010-04-04','mauricio Hafdsaf','',3,13,'M',38,'A.T','G04 ',171,12876422,'A02 ','G06 ','2010-08-04',3),(1255366,'2005-05-04','Mauricio Garay','31053801',2,8,'M',33,'A.T','G06 ',187,14366773,'A39 ','R05 ','2007-03-16',1);
 /*!40000 ALTER TABLE `historiaclinica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,4 +453,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-24 18:05:36
+-- Dump completed on 2018-03-26 17:28:20

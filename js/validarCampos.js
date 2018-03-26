@@ -210,6 +210,11 @@ $(document).ready(function(){
         switch (data) {
           case 'OK':
             $("#modalOK").modal('show');
+            $("input[type=text]").val("");
+            $("input[type=date]").val("");                                        
+            setTimeout(function(){
+              location.reload();
+            }, 2000);
           break;
           case 'ERROR':
             $("#modalERROR").modal('show');

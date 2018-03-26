@@ -53,7 +53,7 @@
                                 echo "<td><button class='btn btn-primary activarModalInfo' data-toggle='modal' data-target='#todaLaInfoHC'>
                                       Ver Historia Clínica Completa
                                       </button></td>";
-                                echo "</tr>";
+                            echo "</tr>";
                         }
                     ?>
                 </tbody>
