@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lista de Admisiones</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <!-- <script src="imprimir.js"></script> -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="listaAdmisiones.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -51,11 +52,17 @@
                         <th>Fecha de Ingreso</th>
                     </tr>
                     <tbody id="contenidoTabla">
-                    
+                        
                     </tbody>
                 </table>
+                <div class="col-md-offset-11 col-md-1">
+                    <input type="button" value="imprimir" class="btn" id="imprimir">
+                </div>
             </div>            
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="imprimir.js"></script>
+    <script src="listaAdmisiones.js"></script>
 </body>
 </html>

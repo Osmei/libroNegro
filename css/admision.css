@@ -2,62 +2,87 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(../img/admision.jpg);
+  background: url(../img/orange.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
-.container { 
-  max-width: 1200px; 
-  margin: 0 auto;
+
+h1 {
+  font-size: 70px;
+  color: snow;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
-form {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr) 150px;
+
+label {
+  font-size: 1.2em;
+  font-weight: bolder;
+  border: 1px solid teal;
+  border-radius: 10px;
+  padding: 3px 10px;
 }
-form > div {
+
+label:hover {
+  border: 1px solid orange;
+}
+
+.submit {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  background: transparent;
-  box-shadow: 0px 5px 10px rgba(0,0,0, 0.4);
-  border-radius: 20px;
-  margin: 10px;
+  align-items: center;
 }
-input {
+
+#cama,
+#sector,
+#nombreApellido,
+#fIngreso,
+#numeroHc,
+#observaciones,
+#diagnostico,
+#edad {
   background: transparent;
-  outline: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: brown;
   border: none;
-  border-bottom: 1.2px solid tan;
-  padding: 10px;
-  font-size: 18px;
+  border-bottom: 1px solid yellow;
 }
-input:hover {
-  border-bottom: 1.5px solid rosybrown;
-}
-h2 {
-  font-size: 30px;
-  color: #262626;
-  margin: 10px;
-}
-.sector {
+
+.contButons {
   display: flex;
-  justify-content: center;
-  align-items: center; 
-  padding: 20px 0; 
+  justify-content: space-around;
+  align-items: center;
 }
-.sector h2 {
-  margin-right: 25px;
-}
-.obraSocial {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.button{
+
+.btnReg {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 20px;
   font-size: 22px;
-  grid-column: 2/3;
-  grid-row: 4/5;
+  color: #262626;
+}
+
+.btnReg:hover {
+  color: white;
+  border: 1px solid orange;
+  font-weight: 200;
+}
+
+.btnAdmiCargadas {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 22px;
+  color: #262626;
+}
+
+.btnAdmiCargadas:hover {
+  color: white;
+  border: 1px solid orange;
+  font-weight: 200;
 }
