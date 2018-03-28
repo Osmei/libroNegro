@@ -17,24 +17,23 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../css/lista.css">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="../js/lista.js"></script>
-
+    
     <title>Lista de Historias Clínicas Registradas</title>
 
 </head>
 <body>
-    <header>
-        <button type="submit" id="volverB" class="btnLista">Cargar</button>
-        <button type="submit" id="volverC" class="btnLista">Página Principal</button>
-    </div>
-    </header>
     <div class="container">
-        <div id="pegarModal">
-            <table class="table table-bordered table-hover">
+        <header>
+            <button type="submit" id="volverB" class="volverB">Cargar</button>
+            <button type="button" id="volverC" class="volverC">Página Principal</button>
+        </header>
+        <div id="pegarModal" class="pegarModal">
+            <table class="table table-bordered">
                 <thead>
                     <th>N° Historia Clínica</th>
                     <th>N° Apellido y Nombre</th>
@@ -51,14 +50,26 @@
                                 echo "<td>".$historia['DNI']."</td>";
                                 echo "<td>".$historia['Accidente']."</td>";
                                 echo "<td><button class='btn btn-primary activarModalInfo' data-toggle='modal' data-target='#todaLaInfoHC'>
-                                      Ver Historia Clínica Completa
-                                      </button></td>";
+                                    Ver Historia Clínica Completa
+                                    </button></td>";
                             echo "</tr>";
                         }
                     ?>
                 </tbody>
             </table>
         </div>
+        <footer>
+            <div>
+                <p>@From: Osmei</p>
+            </div>
+            <div>
+                <p>Division de Informática</p>
+            </div>
+            <div>
+                <img src="../img/hmu_logo.png" title="Logo HMU" class="logoHospi">
+            </div>
+        </footer>
     </div>
+
 </body>
 </html>

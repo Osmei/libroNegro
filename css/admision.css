@@ -2,36 +2,48 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(../img/orange.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #eeeeee;
+  }
+.header {
+  background: #c25e00;
+  border-radius: 3px;
+  margin: 20px;
+  }
+form {
+  background: #FB8C00;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  }
+h1 {
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+  padding: 20px;
+  }
+input, select {
+  text-align: center;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF3E0;
+  margin-top: 20px;
 }
 
-h1 {
-  font-size: 70px;
-  color: snow;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 60px;
+.logoHospi {
+  width: 140px;
+  height: 55px;
+  background: transparent;
 }
 
 label {
-  font-size: 1.2em;
-  font-weight: bolder;
-  border: 1px solid teal;
-  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 200;
   padding: 3px 10px;
-}
-
-label:hover {
-  border: 1px solid orange;
-}
-
-.submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  } 
 
 #cama,
 #sector,
@@ -46,19 +58,20 @@ label:hover {
   font-size: 1.3em;
   color: brown;
   border: none;
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid #ffbd45;
 }
 
 .contButons {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .btnReg {
   background: transparent;
-  border: 1px solid white;
-  border-radius: 10px;
+  border: 1px solid #fff;
+  border-radius: 7px;
   outline: none;
   padding: 5px 20px;
   font-size: 22px;
@@ -86,3 +99,6 @@ label:hover {
   border: 1px solid orange;
   font-weight: 200;
 }
+input {
+  text-align: center;
+  }

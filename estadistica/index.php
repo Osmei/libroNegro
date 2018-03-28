@@ -18,20 +18,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Calcular Estadística</h1>
-            <select name="tiposEst" id="tiposEst" class="form-control">
-                <option value="0">Elegir una opción...</option>
-                <option value="1">Calcular porcentaje de ocupación de camas</option>
-                <option value="2">Calcular giro cama</option>
-                <option value="3">Calcular promedio de pacientes-día por egreso</option>
-                <option value="4">Calcular promedio de días de estada</option>
-                <option value="5">Calcular cantidad de egresos total y por unidad operativa</option>
-                <option value="6">Calcular cantidad de egresos según variables seleccionadas que caracterizan al paciente</option>
-                <option value="7">Calcular tasa de mortalidad hospilataria</option>
-            </select>
+            <div id="calcEstadistica" class="calcEstadistica">    
+                <h1>Calcular Estadística</h1>
+                <select name="tiposEst" id="tiposEst" class="form-control">
+                    <option value="0">Elegir una opción...</option>
+                    <option value="1">Calcular porcentaje de ocupación de camas</option>
+                    <option value="2">Calcular giro cama</option>
+                    <option value="3">Calcular promedio de pacientes-día por egreso</option>
+                    <option value="4">Calcular promedio de días de estada</option>
+                    <option value="5">Calcular cantidad de egresos total y por unidad operativa</option>
+                    <option value="6">Calcular cantidad de egresos según variables seleccionadas que caracterizan al paciente</option>
+                    <option value="7">Calcular tasa de mortalidad hospilataria</option>
+                </select>
+            </div>
         </div>
         <div class="col-md-12">        
-            <div id="divPeriodo">
+            <div id="divPeriodo" class="divPeriodo">
                 <div class="row">
                     <div class="col-md-6">
                         <label for="fDesde">Desde</label>
@@ -45,6 +47,17 @@
             </div>
         </div>        
     </div>
+    <footer>
+        <div>
+            <p>@From: Osmei</p>
+        </div>
+        <div>
+            <p>Division de Informática</p>
+        </div>
+        <div>
+            <img src="../img/hmu_logo.png" title="Logo HMU" class="logoHospi">
+        </div>
+    </footer>
 </div>
 </body>
 </html>
