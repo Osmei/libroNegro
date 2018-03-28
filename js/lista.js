@@ -9,7 +9,7 @@ $(document).ready(function(){
         $("#todaLaInfoHC").remove();
         var tdHClinica = $(this).parent().parent().children()[0];
         var valHClinica = $(tdHClinica).text();
-        console.log(valHClinica);
+        //console.log(valHClinica);
         $.ajax({
             url : 'modalInfoCompleta.php',
             data : {
