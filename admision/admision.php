@@ -29,7 +29,7 @@
         <div class="form-group col-md-6">  
           <div class="sector">
             <label for="sector">Sector</label>
-            <select class="custom-select" id="sector">
+            <select name="sector" class="custom-select" id="sector">
               <option selected>Seleccione sector</option>
               <option value="Sector A">Sector A</option>
               <option value="Sector C">Sector C</option>
@@ -41,7 +41,7 @@
         <div class="form-group col-md-6">
           <div class="cama">
             <label for="cama">Cama</label>
-            <input type="number" class="form-control" id="cama">
+            <input type="number" name="cama" class="form-control" id="cama">
           </div>
         </div>  
       </div>
@@ -49,13 +49,13 @@
         <div class="form-group col-md-6">  
           <div class="nombreApellido">
             <label for="nombreApellido">Nombre y Apellido</label>
-            <input type="text" class="form-control" id="nombreApellido">
+            <input type="text" name="nya" class="form-control" id="nombreApellido">
           </div>
         </div>  
         <div class="form-group col-md-6">  
           <div class="edad">
             <label for="edad">Edad</label>
-            <input type="number" class="form-control" id="edad">
+            <input type="number" name="edad" class="form-control" id="edad">
           </div>
         </div>  
       </div>
@@ -63,26 +63,32 @@
         <div class="form-group col-md-6">  
           <div class="fIngreso">
             <label for="fIngreso">Fecha de Ingreso</label>
-            <input type="date" class="form-control" id="fIngreso">
+            <input type="date" name="ingreso" class="form-control" id="fIngreso">
           </div>
         </div>
         <div class="form-group col-md-6">
           <div class="numeroHc">
             <label for="numeroHc">Número de Historia Clínica</label>
-            <input type="number" class="form-control" id="numeroHc">
+            <input type="number" name="hClinica" class="form-control" id="numeroHc">
           </div>
         </div>
       </div>
       <div class="diagnostico">
-        <div class="form-group diagnostico">
+        <div class="form-group col-lg-12 diagnostico">
           <label for="diagnostico">Diagnóstico</label>
-          <input type="text" class="form-control" id="diagnostico">
+          <input type="text" name="diagnostico" class="form-control" id="diagnostico">
         </div>
       </div>
+      <div class="obraSocial">
+        <div class="form-group col-lg-12 obraSocial">
+-         <label>Art-Obra Social-Mot.Ingreso</label>
+-         <input type="text" name="obraSocial" class="form-control" id="oSocial">
+        </div>  
+      </div>
       <div class="observaciones">
-        <div class="form-group observaciones">
+        <div class="form-group col-lg-12 observaciones">
           <label for="observaciones">Obervaciones</label>
-          <input type="text" class="form-control" id="observaciones">
+          <input type="text" name="observaciones" class="form-control" id="observaciones">
         </div>
       </div>  
       <div class="contButons">

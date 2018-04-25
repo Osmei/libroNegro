@@ -16,7 +16,7 @@
         break;
         case 'registrarAdmision':
             parse_str($_POST['params'],$params);
-            //prd($params);
+            
 
             $queryInsert = "INSERT INTO `libronegro`.`admision` (`cama`, `edad`, `diagnostico`, `observaciones`, `idHistClinica`, `obraSocial`, `idSectorAdmision`, `nombreApellido`, `fechaIngreso`)
                                    VALUES ('".$params["cama"]."', '".$params["edad"]."', '".$params["diagnostico"]."', '".$params["observaciones"]."', '".$params["hc"]."', '".$params["obraSocial"]."', '".$params["sector"]."', '".$params["nya"]."', '".$params["ingreso"]."')";
@@ -47,7 +47,7 @@
             }
             echo $opciones;
         break;
-        case 'cargarTablaFiltros':            
+        case 'cargarTablaFiltros':
             parse_str($_POST['datos'],$params);
             $parametros = "";
             if(is_null($params['fecha']) || $params['fecha']==""){
