@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lista de Admisiones</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-    <!-- <script src="imprimir.js"></script> -->
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contentBtn">
+                    <input type="button" class="btn btn-primary" value="Consultas">
+                    <input type="button" class="btn btn-primary" value="Imprimir">
+                    <input type="button" class="btn btn-primary" value="Descargar">
+                    <input type="button" class="btn btn-primary" value="Jajajajaja">
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div id="filtrosResultado">
                 <div class="col-md-12">
@@ -23,6 +32,12 @@
                         <div class="form-group">
                             <label for="fecha">Fecha de Ingreso:</label>
                             <input type="date" name="fecha" id="fecha" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fecha">Nombre y Apellido:</label>
+                            <input type="text" name="nombre" id="nombre" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -39,18 +54,20 @@
                 </form>                
             </div>
             <div id="tablaResultado">
-                <table class="table table-hover">
-                    <tr>
-                        <th>Cama</th>
-                        <th>Edad</th>
-                        <th>Diagnostico</th>
-                        <th>Observaciones</th>
-                        <th>Número de Historia Clínica</th>
-                        <th>Obra Social</th>
-                        <th>Sector Admisión</th>
-                        <th>Nombre y Apellido</th>
-                        <th>Fecha de Ingreso</th>
-                    </tr>
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-light">    
+                        <tr>
+                            <th>Cama</th>
+                            <th>Nombre y Apellido</th>
+                            <th>Edad</th>
+                            <th>Diagnóstico</th>
+                            <th>Observaciones</th>
+                            <th>Fecha de Ingreso</th>
+                            <th>H.C Nº</th>
+                            <th>Obra Social</th>
+                            <th>Sector</th>
+                        </tr>
+                    </thead>    
                     <tbody id="contenidoTabla">
                         
                     </tbody>
