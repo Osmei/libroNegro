@@ -3,7 +3,7 @@
 
     $bd = new bd();
 
-    $HCs = "SELECT * FROM historiaclinica";
+    $HCs = "SELECT * FROM historiaclinica ORDER BY nroHC DESC" ;
     $historias = $bd->ejecutarNonQuery($HCs);
 
 

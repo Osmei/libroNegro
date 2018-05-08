@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="contentBtn">
                     <input type="button" class="btn btn-primary" value="Consultas">
@@ -21,7 +21,7 @@
                     <input type="button" class="btn btn-primary" value="Jajajajaja">
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div id="filtrosResultado">
                 <div class="col-md-12">
