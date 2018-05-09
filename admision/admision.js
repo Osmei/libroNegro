@@ -14,7 +14,7 @@ $(document).ready(function(){
     $("#btnReg").click(function(event){
         event.preventDefault();        
         var params = $("#formAdmision").serialize();
-        var sector = $( "#sector option:selected" ).text();             
+        var sector = $("#sector option:selected").text();             
         // console.log(params);
         $.ajax({
             url : 'switch.php?op=registrarAdmision',

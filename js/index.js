@@ -23,7 +23,7 @@ $(document).ready(function(){
                         $("#status").html("Usuario y/o contraseña incorrecto.");
                     break;
                     case 'OK':
-                       location.href="acciones.html"; 
+                       location.href="index2.html"; 
                     break;                    
                 }
             }
