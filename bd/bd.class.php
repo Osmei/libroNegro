@@ -6,17 +6,18 @@ class bd{
 
     public $conn;
 
-    public function __construct(){        
-        
+    public function __construct(){
+
         /**SANDRO WINDOWS */
         //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO LINIX */
-        $this->conn = new mysqli("localhost","root","s4ndr0","libronegro");
+        //$this->conn = new mysqli("localhost","root","s4ndr0","libronegro");
         /**MAURI CASA */
         //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
         /**MAURI OFI 1 */
         //$this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
-
+        /**MAURI OFI LOCALHOST */
+        $this->conn = new mysqli("localhost","root","","libronegro");
 
         if(!$this->conn){
             return false;
@@ -27,18 +28,18 @@ class bd{
 
     public function ejecutarQuery($sql){
 		$vec = array();
-		if($resultado = $this->conn->query($sql)){        
+		if($resultado = $this->conn->query($sql)){
 			while($row = $resultado->fetch_assoc()){
-				array_push($vec,$row);            
+				array_push($vec,$row);
 			}
     	}
 		return $vec;
 	}
 
-    public function ejecutarNonQuery($sql) {	
-        $resultado = $this->conn->query($sql);	
+    public function ejecutarNonQuery($sql) {
+        $resultado = $this->conn->query($sql);
 
-        return $resultado; 
+        return $resultado;
     }
 
 }

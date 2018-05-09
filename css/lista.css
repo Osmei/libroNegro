@@ -1,75 +1,64 @@
 body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   background : url(../img/panecillos.jpg);
-   background-size: cover; 
-   background-repeat: no-repeat;
-}
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  background-color: #eeeeee;
+  height: 100vh
+  }
 header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   }
-.btnLista {
-   border: none;
-   border-radius: 3px;
-   /*background: orange;*/
-   background: #4444cf;
-   color: white;
-   padding: 10px;
-   font-weight: bold;
-   font-size: 16px;
-   margin: 20px 40px 10px 40px;
-   }
-.btnLista:hover {
-   background: goldenrod;
-   color: #4444cf;
-   }
-.container {
-   /* background: url(../img/vintage.jpg);
-   background-size: cover;
-   background-repeat: no-repeat; */
-   margin-top: 0px; 
-   }
-.table {
-   border: 2px solid goldenrod;
-   }
-th{
-   color: brown;
-   font-size: 22px;
-   font-weight: bold;
-   text-align: center;
-   }
-tr {
-   color: #151515;
-   font-size: 18px;
-   font-weight: bold;
-   cursor: pointer;
-   }
-tr:hover {
-   font-size: 20px;
-   color: goldenrod;
-   pointer-events: all;
-   }
-h4{
-   color: #262626;
-   font-size: 22px;
-   font-weight: bold;
-   text-align: center;
-   }
-.modal-body {
-   background: orange;
-   color: black;
-   font-size: 18px;
-   font-weight: 300;
-   }
-.modal-body span {
-   color: #fff;
-   font-size: 20px;
-   font-weight: bold;
-   }
-.modal-footer button {
-   background: orange;
-   font-weight: bold;
-   }
+  max-width: 1200px;
+  background-color: #00675b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  margin: 20px;
+}
+.volverB {
+  background-color: #00675b;
+  outline: none;
+  border: 1px solid #52c7b8;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 7px;
+  } 
+.volverB:hover {
+  border: 1px solid #fff;
+  color: #52c7b8;
+  }
+.volverC {
+  background-color: #00675b;
+  outline: none;
+  border: 1px solid #52c7b8;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 7px;
+  }
+.volverC:hover {
+  border: 1px solid #fff;
+  color: #52c7b8;
+  }
+.pegarModal {
+  background-color: #52c7b8;
+}
+.activarModalInfo {
+  background: transparent;
+  font-size: 18px;
+  border: 1px solid #00675b;
+}
+.activarModalInfo:hover {
+  background: none;
+  color: #00675b;
+  border: 1px solid #fff;
+  }
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background: #E0F2F1;
+  }
+.logoHospi {
+  width: 140px;
+  height: 55px;
+}
+

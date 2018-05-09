@@ -1,4 +1,35 @@
+.calcEstadistica {
+    background: #007c91;
+    margin-bottom: 20px;
+    }
+.calcEstadistica h1 {
+    color: #fff;
+    font-size: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    }
 #divPeriodo{
-    margin-top:40px;
-    display:none;
+    background: #00acc1;
+    margin-top: 40px;
+    margin-bottom: 20px; 
+    border-radius: 3px;
+    display: none;
+    }
+#divPeriodo label {
+    color: #262626;
+    padding-top: 10px;
+    padding-left: 5px;
+    }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #E0F2F1; */
+    background: #E0F7FA;
+}
+
+.logoHospi {
+    width: 140px;
+    height: 55px;
 }

@@ -2,62 +2,104 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(../img/admision.jpg);
-  background-size: cover;
-}
-.container { 
-  max-width: 1200px; 
-  margin: 0 auto;
-}
+  background-color: #eeeeee;
+  }
+.header {
+  background: #c25e00;
+  border-radius: 3px;
+  margin: 20px;
+  }
 form {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr) 150px;
+  background: #FB8C00;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  }
+h1 {
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+  padding: 15px;
+  }
+input, select {
+  text-align: center;
 }
-form > div {
+footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF3E0;
+  margin-top: 20px;
+}
+
+.logoHospi {
+  width: 140px;
+  height: 55px;
   background: transparent;
-  box-shadow: 0px 5px 10px rgba(0,0,0, 0.4);
-  border-radius: 20px;
-  margin: 10px;
+}
+
+label {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 3px 10px;
+  } 
+
+#cama,
+#sector,
+#nombreApellido,
+#fIngreso,
+#numeroHc,
+#observaciones,
+#diagnostico,
+#edad,
+#oSocial {
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: brown;
+  border: none;
+  border-bottom: 1px solid #ffbd45;
+}
+
+.contButons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.btnReg {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 22px;
+  color: #262626;
+}
+
+.btnReg:hover {
+  color: white;
+  border: 1px solid orange; 
+  font-weight: 200; 
+}
+
+.btnAdmiCargadas {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 22px;
+  color: #262626;
+}
+
+.btnAdmiCargadas:hover {
+  color: white;
+  border: 1px solid orange;
+  font-weight: 200;
 }
 input {
-  background: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 1.2px solid tan;
-  padding: 10px;
-  font-size: 18px;
-}
-input:hover {
-  border-bottom: 1.5px solid rosybrown;
-}
-h2 {
-  font-size: 30px;
-  color: #262626;
-  margin: 10px;
-}
-.sector {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  padding: 20px 0; 
-}
-.sector h2 {
-  margin-right: 25px;
-}
-.obraSocial {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.button{
-  font-size: 22px;
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
+  text-align: center;
+  }

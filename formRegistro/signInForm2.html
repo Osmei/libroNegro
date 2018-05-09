@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/signInForm2.css">
+   <title>Libro Negro</title>
+
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>   
+  <div class="container">
+    <header>
+      <h1>Libro Negro</h1>   
+    </header>
+    <form class="form-group"> 
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Historia Clínica</label>
+          <input type="text" class="form-control" name="hClinica" id="hClinica">
+        </div>
+        <div class="col-sm-6">
+          <label>Fecha de Ingreso</label>
+          <input type="date" class="form-control" name="fIngreso" id="fIngreso">
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Nombre y Apelllido</label>
+          <input type="text" class="form-control" name="nCompleto" id="nCompleto">
+        </div>
+        <div class="col-sm-6">
+          <label>DNI</label>
+          <input type="text" class="form-control" name="dni" id="dni">
+        </div>
+      </div>  
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Sala</label>
+          <select name="sala" id="sala">
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <label>Cama</label>
+          <select name="cama" id="cama">
+            <option value="">Seleccione cama</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Sexo</label>
+          <select name="sexo" id="sexo">
+            <option value="">Seleccione una opción</option>  
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <label>Edad</label>
+          <input type="number" class="form-control" name="edad" id="edad">
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Accidente</label>
+          <input type="text" class="form-control" name="tAccidente" id="te">
+        </div>
+        <div class="col-sm-6">
+          <label>CIE-10-Ingreso</label>
+          <div id="ponerAquiCie" style="width:95%;"></div>
+          <button class="btn btn-primary" id="elegircie10" data-toggle="modal" data-target="#modalCie10">Elegir</button>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Barrio</label>
+          <div id="ponerAquiBarrio" style="width:95%;"></div>
+          <button class="btn btn-primary" id="elegirbarrio" data-toggle="modal" data-target="#modalBarrio">Elegir</button>
+        </div>
+        <div class="col-sm-6">
+          <label>Médico</label>
+          <select name="medico" id="medico"></select>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>CIE-10-Intermedio</label>
+          <div id="ponerAquiCieB" style="width:80%"></div>
+          <button class="btn btn-primary" id="elegircie100" data-toggle="modalB" data-target="#modalCie100">Elegir</button>
+        </div>
+        <div class="col-sm-6">
+          <label>CIE-10-Egreso</label>
+          <div id="ponerAquiCieC" style="width:95%"></div>
+          <button class="btn btn-primary" id="elegircie1000" data-toggle="modalC"
+          data-target="#modalCie1000">Elegir</button>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-6">
+          <label>Fecha de Alta</label>
+          <input type="number" name="fAlta" id="fAlta">
+        </div>
+        <div class="col-sm-6">
+          <label>Condición de Egreso</label>
+          <select name="cEgreso" id="cEgreso">
+            <option value="" selected="selected">Seleccione una opción</option>
+            <option value="1">Alta</option>
+            <option value="2">Fallecimiento</option>
+            <option value="3">Traslado</option>
+            <option value="4">Derivación</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger" id="myBtnCarga">Cargar</button>
+      <button type="button" class="btn btn-warning" id="volverA">Página Principal</button>
+    </form>  
+  </div>
+</body>
+</html>
