@@ -12,22 +12,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="row">
-            <div class="col-md-12">
-                <div class="contentBtn">
-                    <input type="button" class="btn btn-primary" value="Consultas">
-                    <input type="button" class="btn btn-primary" value="Imprimir">
-                    <input type="button" class="btn btn-primary" value="Descargar">
-                    <input type="button" class="btn btn-primary" value="Jajajajaja">
-                </div>
-            </div>
-        </div> -->
         <div class="row">
             <div id="filtrosResultado">
                 <div class="col-md-12">
                     <h3>Buscar por</h3>
                 </div>
-                <form>
+                <form class="filtro_admisiones">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fecha">Fecha de Ingreso:</label>
@@ -69,7 +59,7 @@
                         </tr>
                     </thead>    
                     <tbody id="contenidoTabla">
-                        
+                                
                     </tbody>
                 </table>
                 <div class="col-md-offset-11 col-md-1">
@@ -78,6 +68,7 @@
             </div>            
         </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="imprimir.js"></script>
     <script src="listaAdmisiones.js"></script>
