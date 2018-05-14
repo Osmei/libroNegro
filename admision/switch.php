@@ -17,9 +17,9 @@
         case 'registrarAdmision':
             parse_str($_POST['params'],$params);
             
-
+            
             $queryInsert = "INSERT INTO `libronegro`.`admision` (`cama`, `edad`, `diagnostico`, `observaciones`, `idHistClinica`, `obraSocial`, `idSectorAdmision`, `nombreApellido`, `fechaIngreso`)
-                                   VALUES ('".$params["cama"]."', '".$params["edad"]."', '".$params["diagnostico"]."', '".$params["observaciones"]."', '".$params["hc"]."', '".$params["obraSocial"]."', '".$params["sector"]."', '".$params["nya"]."', '".$params["ingreso"]."')";
+                                   VALUES ('".$params["cama"]."', '".$params["edad"]."', '".$params["diagnostico"]."', '".$params["observaciones"]."', '".$params["hClinica"]."', '".$params["obraSocial"]."', '".$params["sector"]."', '".$params["nya"]."', '".$params["ingreso"]."')";
             //prd($queryInsert);
             if($bd->ejecutarNonQuery($queryInsert))
                 echo "OK";
@@ -30,7 +30,7 @@
         break;
         case 'cargarTablaReady':
             $queryTabla = "SELECT * FROM admision a INNER JOIN sectoradmision sa ON (a.idSectorAdmision = sa.idSector)";
-            $admisiones = $bd->ejecutarQuery($queryTabla);            
+            $admisiones = $bd->ejecutarQuery($queryTabla);          //prd($queryTabla);     
             $opciones = "";
             foreach ($admisiones as $admision) {
                 $opciones .= "<tr>";
@@ -70,7 +70,7 @@
                             FROM admision a 
                             INNER JOIN sectoradmision sa ON (a.idSectorAdmision = sa.idSector)
                             WHERE 1=1 ".$parametros;
-                             
+                             //prd($queryFiltros);
             $admisiones = $bd->ejecutarQuery($queryFiltros);            
             $opciones = "";
             foreach ($admisiones as $admision) {
