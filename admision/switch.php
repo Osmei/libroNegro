@@ -60,6 +60,11 @@
             }else{
                 $parametros .= " && idSectorAdmision = '".$params['sector']."'";
             }
+            if(is_null($params['nombre']) || $params['nombre']=="" || $params['nombre']=="0"){
+                $parametros .= "";
+            }else{
+                $parametros .= " && nombreApellido like '%".$params['nombre']."%'";
+            }
 
             $queryFiltros = "SELECT * 
                             FROM admision a 
@@ -71,14 +76,14 @@
             foreach ($admisiones as $admision) {
                 $opciones .= "<tr>";
                 $opciones .=    "<td>".$admision['cama']."</td>";
+                $opciones .=    "<td>".$admision['nombreApellido']."</td>";
                 $opciones .=    "<td>".$admision['edad']."</td>";
                 $opciones .=    "<td>".$admision['diagnostico']."</td>";
                 $opciones .=    "<td>".$admision['observaciones']."</td>";
+                $opciones .=    "<td>".$admision['fechaIngreso']."</td>";
                 $opciones .=    "<td>".$admision['idHistClinica']."</td>";
                 $opciones .=    "<td>".$admision['obraSocial']."</td>";
                 $opciones .=    "<td>".$admision['descripcion']."</td>";
-                $opciones .=    "<td>".$admision['nombreApellido']."</td>";
-                $opciones .=    "<td>".$admision['fechaIngreso']."</td>";
                 $opciones .= "</tr>";
             }
             echo $opciones;
