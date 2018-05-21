@@ -8,13 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/seguridad.css">
     
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div id="filtrosResultado">
-                <div class="col-md-12">
+            <div id="filtrosResultado" class="filtrosResultado">
+                <div class="col-md-12 ">
                     <h3>Buscar por</h3>
                 </div>
                 <form class="filtro_admisiones">
@@ -38,12 +39,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-offset-10 col-md-6">
-                        <input type="submit" value="Buscar" class="btn btn-success" id="buscarAdmi">
+                    <div class="col-md-offset-11 col-md-1 mt-5">
+                        <input type="submit" value="Buscar" class="btn btn-primary" id="buscarAdmi">
                     </div>
                 </form>                
             </div>
-            <div id="tablaResultado">
+            <div id="tablaResultado" class="tablaResultado">
                 <table class="table table-hover table-bordered">
                     <thead class="thead-light">    
                         <tr>
@@ -51,14 +52,10 @@
                             <th>Cama</th>
                             <th>Nombre y Apellido</th>
                             <th>Edad</th>
-                            <th>Diagnóstico</th>
-                            <th>Observaciones</th>
                             <th>Fecha de Ingreso</th>
-                            <th>H.C Nº</th>
-                            <th>Obra Social</th>
-                        </tr>
+                          </tr>
                     </thead>    
-                    <tbody id="contenidoTabla">
+                    <tbody id="contenidoTablaSeguridad">
                                 
                     </tbody>
                 </table>

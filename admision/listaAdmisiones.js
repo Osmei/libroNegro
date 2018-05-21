@@ -36,4 +36,30 @@ $(document).ready(function(){
             }
         });
     });
+    $.ajax({
+        url: 'switch.php?op=cargarTablaReadySeguridad',
+        data: {
+
+        },
+        type: 'POST',
+        dataType: 'html',
+        success: function (data) {
+            $("#contenidoTablaSeguridad").html(data);
+        }
+    });
+    $("#buscarAdmi").click(function (e) {
+        e.preventDefault();
+        var datos = $("form").serialize();
+        $.ajax({
+            url: 'switch.php?op=cargarTablaFiltrosSeguridad',
+            data: {
+                datos: datos
+            },
+            type: 'POST',
+            dataType: 'html',
+            success: function (data) {
+                $("#contenidoTablaSeguridad").html(data);
+            }
+        });
+    });
 });
