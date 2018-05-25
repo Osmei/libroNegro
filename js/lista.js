@@ -5,6 +5,26 @@ $(document).ready(function(){
     $("#volverC").click(function () {
         location.href = "../acciones.html";
     })
+    activarModalInfo();
+    
+    $("#busqueda").keyup(function(){
+        var palabra = $("#busqueda").val();
+        console.log("A");
+        $.ajax({
+            url : 'switch.php?op=buscarHC',
+            data : {
+                palabra: palabra
+            },
+            type : 'POST',
+            dataType : 'text',      
+            success : function(data){                
+                $("#insertarBusquedas").html(data);
+                activarModalInfo();
+            }
+        });
+    });
+});
+function activarModalInfo(){
     $(".activarModalInfo").click(function(){
         $("#todaLaInfoHC").remove();
         var tdHClinica = $(this).parent().parent().children()[0];
@@ -23,4 +43,4 @@ $(document).ready(function(){
             }
         });
     });
-});
+}

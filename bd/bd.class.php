@@ -11,11 +11,11 @@ class bd{
         /**SANDRO WINDOWS */
         //$this->conn = new mysqli("localhost","root","s4ndr0i99i","LibroNegro");
         /**SANDRO LINIX */
-        //$this->conn = new mysqli("localhost","root","s4ndr0","libronegro");
+        $this->conn = new mysqli("localhost","root","s4ndr0","libronegro");
         /**MAURI CASA */
         //$this->conn = new mysqli("localhost","libronegro","f1882,cM-N","LibroNegro");
         /**MAURI OFI 1 */
-        $this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
+        //$this->conn = new mysqli("mysql.urgencias.local","root","f1882,cM-N","libronegro");
         /**MAURI OFI LOCALHOST */
         //$this->conn = new mysqli("localhost","root","","libronegro");
 

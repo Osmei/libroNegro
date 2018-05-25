@@ -43,7 +43,7 @@
                     <th>Accidente</th>
                     <th>Ver</th>
                 </thead>
-                <tbody>
+                <tbody id="insertarBusquedas">
                     <?php
                         foreach ($historias as $historia){
                             echo "<tr>";
