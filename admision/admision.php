@@ -2,116 +2,106 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admisión</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="admision.js"></script>
-  
   <link rel="stylesheet" href="../css/admision.css">
-  
-  <title>Admision</title>
+  <script src="admision.js"></script>
 </head>
 
 <body>
-  
+
   <div class="container">
-    <header class="header">
-      <h1>Sistema de Admisión</h1>
-    </header>
-  </div>
-  
-  <div class="container">
-    <form action="" name="formAdmision" id="formAdmision" class="formAdmision">
+    <h2 class="text-center">Sistema de Admisión</h3>
+    
+    <div class="jumbotron">
+      <h2 class="text-muted text-center">Listar Pacientes</h2>
       
-      <div class="form-row">
-        <div class="form-group col-md-6">  
-          <div class="sector">
+      <form id="formAdmision" class="formAdmision" id="formAdmision">
+        <div class="form-row">
+          <div class="form-group col-lg-6">
             <label for="sector">Sector</label>
             <select name="sector" class="custom-select" id="sector">
-              <option selected>Seleccione sector</option>
-              <option value="Sector A">Sector A</option>
-              <option value="Sector C">Sector C</option>
-              <option value="Sector UTI">UTI</option>
-              <option value="Sector Shock Room">Shock Room</option>
+
             </select>
           </div>
-        </div>  
-        <div class="form-group col-md-6">
-          <div class="cama">
+          <div class="form-group col-sm-6">
             <label for="cama">Cama</label>
-            <input type="number" name="cama" class="form-control" id="cama">
+            <input type="number" name="cama" class="form-control" id="cama" placeholder="cama">
           </div>
-        </div>  
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">  
-          <div class="nombreApellido">
-            <label for="nombreApellido">Nombre y Apellido</label>
-            <input type="text" name="nya" class="form-control" id="nombreApellido">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="nya">Nombre y Apellido</label>
+            <input type="text" name="nya" class="form-control" id="nya" placeholder="Nombre y Apellido">
           </div>
-        </div>  
-        <div class="form-group col-md-6">  
-          <div class="edad">
+          <div class="form-group col-sm-6">
             <label for="edad">Edad</label>
-            <input type="number" name="edad" class="form-control" id="edad">
+            <input type="number" name="edad" class="form-control" id="edad" placeholder="edad">
           </div>
-        </div>  
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">  
-          <div class="fIngreso">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-6">
             <label for="fIngreso">Fecha de Ingreso</label>
             <input type="date" name="ingreso" class="form-control" id="fIngreso">
           </div>
-        </div>
-        <div class="form-group col-md-6">
-          <div class="numeroHc">
-            <label for="numeroHc">Número de Historia Clínica</label>
+          <div class="form-group col-sm-6">
+            <label for="nroHc">Nro Historia Clínica</label>
             <input type="number" name="hClinica" class="form-control" id="numeroHc">
           </div>
         </div>
-      </div>
-      <div class="diagnostico">
-        <div class="form-group col-lg-12 diagnostico">
-          <label for="diagnostico">Diagnóstico</label>
-          <input type="text" name="diagnostico" class="form-control" id="diagnostico">
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="diagnostico">Diagnóstico</label>
+            <input type="text" name="diagnostico" id="diagnostico" class="form-control" placeholder="Diagnóstico">
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="oSocial">ART - Obra Social - Motivo de Ingreso</label>
+            <input type="text" name="obraSocial" class="form-control" id="oSocial">
+          </div>
         </div>
-      </div>
-      <div class="obraSocial">
-        <div class="form-group col-lg-12 obraSocial">
--         <label>Art-Obra Social-Mot.Ingreso</label>
--         <input type="text" name="obraSocial" class="form-control" id="oSocial">
-        </div>  
-      </div>
-      <div class="observaciones">
-        <div class="form-group col-lg-12 observaciones">
-          <label for="observaciones">Obervaciones</label>
-          <input type="text" name="observaciones" class="form-control" id="observaciones">
+        <div class="form-row">
+          <div class="form-group col-lg-12">
+            <label for="observaciones">Observaciones</label>
+            <input type="text" name="observaciones" class="form-control" id="observaciones" placeholder="Observaciones Generales...">
+          </div>
         </div>
-      </div>  
-      <div class="contButons">
-        <div class="contSubmit">
-          <input type="submit" class="btnReg" id="btnReg" value="Registrar">
+        <div class="content-buttons">
+          <button type="submit" name="btnReg" id="btnReg" class="btn btn-primary btn-lg">Registrar</button>
+          <button type="button" class="btn btn-primary btn-lg" id="btnAdmiCargadas">Ver Admisiones</button>
         </div>
-        <div class="contButton">
-          <input type="button" class="btnAdmiCargadas" id="btnAdmiCargadas" value="Ver Admisiones Cargadas">
-        </div>
-      </div>
-    
-    </form>
-    <footer>
-      <div>
-        <p>@From: Osmei</p>
-      </div>
-      <div>
-        <p>Division de Informática</p>
-      </div>
-      <div>
-        <img src="../img/hmu_logo.png" title="Logo HMU" class="logoHospi">
-      </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <label>&copy; 2018 Informática, Inc.</label>
+      <img src="../img/hmu_logo.png" title="Logo HMU" class="logoHospi">
+      <label>Division de Informática</label>
     </footer>
   </div>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <a href="#" target="_blank" class="btn btn-primary btn-lg" role="button" id="btnAdmiCargadas">Ver Admisiones Cargadas</a> -->

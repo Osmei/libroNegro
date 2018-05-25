@@ -31,6 +31,7 @@
     <div class="container">
         <header>
             <button type="submit" id="volverB" class="volverB">Cargar</button>
+            <input type="text" id="busqueda" class="busqueda" placeholder="DNI, Nombre y Apellido, Fecha">
             <button type="button" id="volverC" class="volverC">Página Principal</button>
         </header>
         <div id="pegarModal" class="pegarModal">
