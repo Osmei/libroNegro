@@ -4,7 +4,7 @@ ini_set('display_errors', 'On');
 ini_set("display_errors", 1); */
 class bd{
 
-    public $conn;
+    public $conn; 
 
     public function __construct(){
 
