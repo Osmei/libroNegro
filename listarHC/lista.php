@@ -48,13 +48,13 @@
                         foreach ($historias as $historia){
                             echo "<tr>";
                                 echo "<td>".$historia['nroHC']."</td>";
-                                echo "<td>".$historia['ApellidoNombre']."</td>";
+                                echo "<td>".utf8_encode($historia['ApellidoNombre'])."</td>";
                                 echo "<td>".$historia['DNI']."</td>";
-                                echo "<td>".$historia['Accidente']."</td>";
+                                echo "<td>".utf8_encode($historia['Accidente'])."</td>";
                                 echo "<td><button class='btn btn-primary activarModalInfo' data-toggle='modal' data-target='#todaLaInfoHC'>
                                     Ver Historia Clínica Completa
                                     </button></td>";
-                            echo "</tr>";
+                            echo "</tr>";                            
                         }
                     ?>
                 </tbody>

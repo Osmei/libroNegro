@@ -38,20 +38,20 @@
       <div class="modal-body">
         <?php
           echo "<span> Fecha de Ingreso: </span> ". $row['fechaDeIngreso']."<br>";
-          echo "<span> Nombre y Apellido: </span> ". $row['ApellidoNombre']."<br>";
+          echo "<span> Nombre y Apellido: </span> ". utf8_encode($row['ApellidoNombre'])."<br>";
           echo "<span> DNI: </span> ". $row['DNI']."<br>";
-          echo "<span> Sala: </span> ". $row['nombreSala']."<br>";
+          echo "<span> Sala: </span> ". utf8_encode($row['nombreSala'])."<br>";
           echo "<span> Cama: </span> ". $row['nroCama']."<br>";
           echo "<span> Sexo: </span> ". $row['Sexo']."<br>";
           echo "<span> Edad: </span> ". $row['Edad']."<br>";
-          echo "<span> Accidente: </span> ". $row['Accidente']."<br>";
-          echo "<span> CIE 10 - Ingreso: </span> ". $row['CIE10_idCIE10_ingreso']."<br>";
-          echo "<span> Barrio: </span> ". $row['barrio']."<br>";
-          echo "<span> Médico: </span> ". $row['Medico_idMedico']." - ".$row['Nombre']."<br>";
-          echo "<span> CIE 10 - Intermedio: </span> ". $row['CIE10_idCIE10_intermedio']."<br>";
-          echo "<span> CIE 10 - Egreso: </span> ". $row['CIE10_idCIE10_egreso']."<br>";
+          echo "<span> Accidente: </span> ". utf8_encode($row['Accidente'])."<br>";
+          echo "<span> CIE 10 - Ingreso: </span> ". utf8_encode($row['CIE10_idCIE10_ingreso'])."<br>";
+          echo "<span> Barrio: </span> ". utf8_encode($row['barrio'])."<br>";
+          echo "<span> Médico: </span> ". $row['Medico_idMedico']." - ".utf8_encode($row['Nombre'])."<br>";
+          echo "<span> CIE 10 - Intermedio: </span> ". utf8_encode($row['CIE10_idCIE10_intermedio'])."<br>";
+          echo "<span> CIE 10 - Egreso: </span> ". utf8_encode($row['CIE10_idCIE10_egreso'])."<br>";
           echo "<span> Fecha de Alta: </span> ". $row['fechaDeAlta']."<br>";
-          echo "<span> Condición de Egreso: </span> ". $row['CausaEgreso']."<br>";
+          echo "<span> Condición de Egreso: </span> ". utf8_encode($row['CausaEgreso'])."<br>";
         ?>
         <?php
           }
