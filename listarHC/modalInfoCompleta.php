@@ -50,7 +50,6 @@
           echo "<span> Médico: </span> ". $row['Medico_idMedico']." - ".$row['Nombre']."<br>";
           echo "<span> CIE 10 - Intermedio: </span> ". $row['CIE10_idCIE10_intermedio']."<br>";
           echo "<span> CIE 10 - Egreso: </span> ". $row['CIE10_idCIE10_egreso']."<br>";
-          echo "<span> Edad: </span> ". $row['Edad']."<br>";
           echo "<span> Fecha de Alta: </span> ". $row['fechaDeAlta']."<br>";
           echo "<span> Condición de Egreso: </span> ". $row['CausaEgreso']."<br>";
         ?>
@@ -59,8 +58,7 @@
         ?>      
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Imprimir</button>        
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>     
       </div>
     </div>
   </div>

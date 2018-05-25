@@ -29,7 +29,7 @@
 
         break;
         case 'cargarTablaReady':
-            $queryTabla = "SELECT * FROM admision a INNER JOIN sectoradmision sa ON (a.idSectorAdmision = sa.idSector)";
+            $queryTabla = "SELECT * FROM admision a INNER JOIN sectoradmision sa ON (a.idSectorAdmision = sa.idSector) ORDER BY fechaIngreso DESC";
             $admisiones = $bd->ejecutarQuery($queryTabla);          //prd($queryTabla);     
             $opciones = "";
             foreach ($admisiones as $admision) {
